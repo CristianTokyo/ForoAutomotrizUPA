@@ -8004,7 +8004,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #666666; }
+  color:# #666666; }
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8291,7 +8291,8 @@ h1, h2, h3, h4, h5,
     font-size: 40px;
     font-weight: 500;
     border-left: 1px solid rgba(0, 0, 0, 0.05);
-    color: #1162fb; }
+    color: #0093CA; // #1162fb;
+  }
     @media (max-width: 991.98px) {
       #timer .time {
         font-size: 30px; } }
@@ -8869,7 +8870,8 @@ textarea.form-control {
   visibility: hidden; }
 
 .bg-primary {
-  background: #1162fb !important; }
+  background: #1162fb !important;
+}
 
 .media-custom {
   background: #fff; }
