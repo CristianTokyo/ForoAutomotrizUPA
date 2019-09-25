@@ -8253,7 +8253,7 @@ h1, h2, h3, h4, h5,
     font-size: 20px;
     line-height: 1.5;
     font-weight: 300;
-    color: #0093CA; //rgba(0, 0, 0, 0.8);
+    color: #ffffff; //rgba(0, 0, 0, 0.8);
   }
     .slider-text p strong {
       font-weight: 700; }
@@ -8302,7 +8302,7 @@ h1, h2, h3, h4, h5,
     #timer .time span {
       font-size: 12px;
       display: block;
-      color: #000000;
+      color: #ffffff;
       text-transform: uppercase; }
 
 .request-form {
