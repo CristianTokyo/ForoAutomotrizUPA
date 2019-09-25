@@ -34,7 +34,9 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
-
+/*azulRey #0093CA
+  aqua #6BCBB8
+*/
 *,
 *::before,
 *::after {
@@ -8250,7 +8252,8 @@ h1, h2, h3, h4, h5,
     font-size: 20px;
     line-height: 1.5;
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.8); }
+    color: #0093CA; //rgba(0, 0, 0, 0.8);
+  }
     .slider-text p strong {
       font-weight: 700; }
       .slider-text p strong a {
