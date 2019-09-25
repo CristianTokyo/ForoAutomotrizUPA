@@ -8056,11 +8056,11 @@ h1, h2, h3, h4, h5,
     padding-bottom: .9rem;
     padding-left: 20px;
     padding-right: 20px;
-    color: #000000;
+    color: #6BCBB8; //#000000;
     font-weight: 400;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: #000000; }
+      color: #0093CA; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
         padding-left: 0;
@@ -8115,7 +8115,7 @@ h1, h2, h3, h4, h5,
     border: 1px solid #6b76ff;
     background: #6b76ff !important; }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: rgba(0, 0, 0, 0.5); }
+    color: rgba(107, 203, 184, 0.5); }
   @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav > .nav-item.active > a {
       color: #1162fb; } }
