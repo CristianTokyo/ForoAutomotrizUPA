@@ -8233,7 +8233,7 @@ h1, h2, h3, h4, h5,
   height: 850px; }
   .slider-text h1 {
     font-size: 28px;
-    color: #000000;
+    color: #6BCBB8;
     line-height: 1.2;
     font-weight: 200; }
     .slider-text h1 span {
@@ -8871,7 +8871,7 @@ textarea.form-control {
   visibility: hidden; }
 
 .bg-primary {
-  background: #0093CA!important; //#1162fb 
+  background: #0093CA!important; //#1162fb
 }
 
 .media-custom {
