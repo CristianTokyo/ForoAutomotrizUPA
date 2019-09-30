@@ -8151,7 +8151,7 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light.scrolled .nav-item.cta > a {
       color: #fff !important;
       background: #0093CA;
-      border: none !important;
+      border: none !important;s
       padding-top: 0.5rem !important;
       padding-bottom: .5rem !important;
       padding-left: 20px !important;
@@ -8470,7 +8470,7 @@ h1, h2, h3, h4, h5,
     outline: none; }
   .btn.btn-primary {
     background: #0093CA !important;
-    border: 1px solid #1162fb !important;
+    border: 1px solid #0093CA !important;
     color: #fff !important; }
     .btn.btn-primary:hover {
       border: 1px solid #1162fb;
@@ -8731,7 +8731,7 @@ h1, h2, h3, h4, h5,
       background: #1162fb !important;
       color: #fff; }
   .block-7.active {
-    background: #1162fb; }
+    background: #0093CA; }
     .block-7.active .heading {
       color: #fff; }
     .block-7.active .heading-2 {
