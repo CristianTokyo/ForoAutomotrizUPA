@@ -85,15 +85,15 @@
             <p><span>Sitio WEB:</span> <a href="http://www.foroautomotrizags-upa.com/">www.foroautomotrizags-upa.com</a></p>
           </div>
         </div>
-
-        <!--<div class="row block-9">
+<!-- Formulario para ellegit el taller  -->
+        <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-light p-5 contact-form">
+            <form action="<?php  echo htmlspecialchars($_POST['PHP_SELF']) ?>" class="bg-light p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                E-mail <input type="text" class="form-control" name="email" placeholder="Your Name">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                Password<input type="text" class="form-control" name="contra" placeholder="Your Email">
               </div>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Subject">
@@ -110,7 +110,7 @@
           <div class="col-md-6 d-flex">
           	<div id="map" class="bg-white"></div>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
 
