@@ -86,11 +86,14 @@
           </div>
         </div>
 <!-- Formulario para ellegit el taller  -->
+<h1>Ingrese los talleres a los  que guste ir: </h1>
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="<?php  echo htmlspecialchars($_POST['PHP_SELF']) ?>" class="bg-light p-5 contact-form">
+            <form action="<?php   echo htmlspecialchars($_POST['PHP_SELF']) ?>" class="bg-light p-5 contact-form">
               <div class="form-group">
-                E-mail <input type="text" class="form-control" name="email" placeholder="Your Name">
+            
+                  
+                <!-- E-mail <input type="text" class="form-control" name="email" placeholder="Your Name"> -->
               </div>
               <div class="form-group">
                 Password<input type="text" class="form-control" name="contra" placeholder="Your Email">
