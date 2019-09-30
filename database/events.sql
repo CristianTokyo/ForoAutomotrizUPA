@@ -50,8 +50,8 @@ CREATE TABLE IF NOT EXISTS `users_events` (
   CONSTRAINT `fk_users_events_events1`
     FOREIGN KEY (`idevent`) REFERENCES `events`(`idevent`));
 
-INSERT INTO `types` VALUES (null, 'Conferencia kk');
-INSERT INTO `events` VALUES (null, 1, 'caca', 'yo', 'gfe', '17:00', 0, 30);
+INSERT INTO `types` VALUES (null, 'Conferencia');
+INSERT INTO `events` VALUES (null, 1, 'Importancia del Factor Humano en El Sector Automotriz', 'Cristian Sanchez Velasco', 'CEO', '17:00', 0, 30);
 INSERT INTO `users` VALUES (null, 'cris@gmail.com', '1234');
 INSERT INTO `users_events` VALUES (null, 1, 1);
 
