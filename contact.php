@@ -56,7 +56,7 @@
     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/portada_foro.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start">
           <div class="col-md-9 ftco-animate pb-5">
             <h1 class="mb-3 bread">Contacto</h1>
             <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Inicio <i class="ion-ios-arrow-forward"></i></a></span> <span>Contacto <i class="ion-ios-arrow-forward"></i></span></p>
@@ -86,7 +86,7 @@
           </div>
         </div>
 <!-- Formulario para ellegit el taller  -->
-        <h1>Ingrese los talleres a los  que guste ir: </h1>
+        <!--<h1>Ingrese los talleres a los  que guste ir: </h1>-->
         <div class="row block-9">
         <div class="col-md-6 order-md-last d-flex">
             <form action="<?php   echo htmlspecialchars($_POST['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
