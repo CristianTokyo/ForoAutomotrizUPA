@@ -86,17 +86,17 @@
           </div>
         </div>
 <!-- Formulario para ellegit el taller  -->
-<h1>Ingrese los talleres a los  que guste ir: </h1>
+        <h1>Ingrese los talleres a los  que guste ir: </h1>
         <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
+        <div class="col-md-6 order-md-last d-flex">
             <form action="<?php   echo htmlspecialchars($_POST['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
                 <?php foreach ($resultado as $eventos ): ?>
-                  <!-- <div class="form-group"> -->
+                <div class="form-group">
                    <p> <?php echo $eventos['ename']  ?> </p>
                    <p> <?php echo $eventos['beginhr']  ?> </p>
                    <p> <?php echo $eventos['finishhr']  ?> </p>
                    <input type="checkbox" name="" id="">
-                  <!-- </div> -->
+                </div>
                  <?php endforeach;  ?>
 
               <!-- <div class="form-group">
@@ -121,6 +121,7 @@
           	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4402.68280269983!2d-102.28202814780325!3d21.88836574703093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee6a3559ea7d%3A0xcc5e561ebe7ea9dd!2sForo%20Trece!5e0!3m2!1ses-419!2smx!4v1569937126534!5m2!1ses-419!2smx" width=100% height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
           </div>
         </div>
+
       </div>
     </section>
 
