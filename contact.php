@@ -43,7 +43,7 @@
 	          <li class="nav-item"><a href="schedule.html" class="nav-link">Programa</a></li>
 	          <!--<li class="nav-item"><a href="blog.html" class="nav-link">Aliados</a></li>-->
             <li class="nav-item"><a href="hospitality.html" class="nav-link">Hospitalidad</a></li>
-	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contacto</a></li>
+	          <li class="nav-item active"><a href="contact.php" class="nav-link">Contacto</a></li>
 	          <li class="nav-item cta mr-md-2"><a href="index.html" class="nav-link">Registro</a></li>
             <li class="nav-item cta mr-md-2"><a href="stands.html" class="nav-link">Stand</a></li>
             <li class="nav-item"><a href="https://vivaaguascalientes.com/" class="nav-link"><img src= "images/VivaAguascalientes.png" width="100" height="50"></a></li>
@@ -53,7 +53,7 @@
 	  </nav>
     <!-- END nav -->
 
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1_dark.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/portada_foro.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
@@ -118,7 +118,7 @@
           </div>
 
           <div class="col-md-6 d-flex">
-          	<div id="map" class="bg-white"></div>
+          	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4402.68280269983!2d-102.28202814780325!3d21.88836574703093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee6a3559ea7d%3A0xcc5e561ebe7ea9dd!2sForo%20Trece!5e0!3m2!1ses-419!2smx!4v1569937126534!5m2!1ses-419!2smx" width=100% height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
           </div>
         </div>
       </div>
