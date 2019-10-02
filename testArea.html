@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+.uzay{
+background-image:url('images/LAYOUT_STAND2.png');
+width:145px;
+height:126px;
+border:1px solid turquoise;
+}
+.rect{ fill:transparent; cursor:pointer;}
+
+</style>
+<script type="text/javascript">
+var A = ["green","red","yellow"];
+function renkli(ad){   // alert(ad);
+var el= document.getElementById(ad);
+//el.setAttribute('fill',A[i]);
+el.style.fill="green";
+}
+
+/*
+http://www.w3schools.com/svg/svg_circle.asp
+http://www.w3schools.com/svg/svg_rect.asp
+
+http://www.w3schools.com/jsref/prop_area_coords.asp
+
+http://www.w3schools.com/jsref/prop_area_shape.asp
+
+http://www.howtocreate.co.uk/tutorials/html/imagemaps
+*/
+</script>
+
+</head>
+<body>
+
+<p>Click on the sun or on one of the planets to watch it closer:</p>
+
+<img src="images/LAYOUT_STAND2.png" width="100%" height="500" alt="Planets" usemap="#planetmap">
+
+<map name="planetmap" id="planetmap">
+  <area shape="rect" coords="0,0,30,30" alt="Sun" href="sun.htm" id ="rect1">
+  <area shape="rect" coords="30,0,60,30" alt="Mercury" href="mercur.htm" id = "rect2">
+</map>
+
+<script type="text/javascript">
+function toSvg(ad){
+var m, a, t,s,b, c, cc;
+m = document.getElementById(ad);
+ a = m.getElementsByTagName('area');
+ t='<svg class="uzay">';
+
+// alert(a.length);
+//alert(a[0].getAttribute('shape'));
+for(var i=0; i<a.length; i++) {
+s = a[i].getAttribute('shape');
+c = a[i].getAttribute('coords');
+b= s+i;
+if(s =='rect') {
+cc = c.split(',');
+t+=  '<rect x="'+cc[0]+'"  y="'+cc[1]+'"  width="'+(cc[2]-cc[0])+'" height="'+(cc[3]-cc[1])+'" class="rect"  id="'+b+'" onclick="renkli(this.id)"/>';
+}
+}
+
+t+='</svg>';
+
+var el= document.getElementById('mekan');
+el.innerHTML = t + 'click  circle and rect';
+alert(el.innerHTML);
+}
+
+
+</script><br>
+<input type="button" value="to svg" onclick="toSvg('planetmap')">
+<div id="mekan"></div>
+<svg class="uzay">
+  <rect x="0" y="0" width="30" height="30" class="rect" id="rect0" style="fill:green"></rect>
+  <rect x="30" y="0" width="30" height="30" class="rect" id="rect1" style="fill:red"></rect>
+</svg>
+
+
+</body>
+</html>
