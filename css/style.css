@@ -9229,13 +9229,13 @@ textarea.form-control {
   width: 100%; }
   @media (max-width: 991.98px) {
     .ftco-counter .img {
-      height: 8000px;
-      background-position: center !important; } }
+      height: 80px;
+      background-position: center !important;} }
 
 .ftco-counter .text strong.number {
   font-weight: 600;
   font-size: 28px;
-  color:#20c997; }
+  color:#0093CA; }
 
 .ftco-counter .text span {
   display: block;
