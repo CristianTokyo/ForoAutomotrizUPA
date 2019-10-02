@@ -2085,8 +2085,7 @@ fieldset:disabled a.btn {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); }
   .btn-primary.disabled, .btn-primary:disabled {
-    color: #fff;
-    background-color: #007bff;
+      background-color: #007bff;
     border-color: #007bff; }
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
@@ -9236,12 +9235,12 @@ textarea.form-control {
 .ftco-counter .text strong.number {
   font-weight: 600;
   font-size: 28px;
-  color: #fff; }
+  color:#20c997; }
 
 .ftco-counter .text span {
   display: block;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 255);
   margin-bottom: 10px; }
 
 .ftco-counter .icon {
@@ -9253,8 +9252,8 @@ textarea.form-control {
   -ms-border-radius: 50%;
   border-radius: 50%; }
   .ftco-counter .icon span {
-    color: #fff;
-    font-size: 40px; }
+    color: white;
+        font-size: 40px; }
 
 @media (max-width: 767.98px) {
   .ftco-counter .counter-wrap {
@@ -9331,7 +9330,7 @@ textarea.form-control {
     margin-bottom: 4px;
     font-weight: 400; }
     .block-27 ul li a, .block-27 ul li span {
-      color: #1162fb;
+      color: red;
       text-align: center;
       display: inline-block;
       width: 40px;
