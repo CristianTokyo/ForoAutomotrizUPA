@@ -86,10 +86,20 @@
           </div>
         </div>
 <!-- Formulario para ellegit el taller  -->
+<h1>Ingrese los talleres a los  que guste ir: </h1>
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="<?php  echo htmlspecialchars($_POST['PHP_SELF']) ?>" class="bg-light p-5 contact-form">
-              <div class="form-group">
+            <form action="<?php   echo htmlspecialchars($_POST['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
+                <?php foreach ($resultado as $eventos ): ?>
+                  <!-- <div class="form-group"> -->
+                   <p> <?php echo $eventos['ename']  ?> </p>
+                   <p> <?php echo $eventos['beginhr']  ?> </p>
+                   <p> <?php echo $eventos['finishhr']  ?> </p>
+                   <input type="checkbox" name="" id="">
+                  <!-- </div> -->
+                 <?php endforeach;  ?>
+
+              <!-- <div class="form-group">
                 E-mail <input type="text" class="form-control" name="email" placeholder="Your Name">
               </div>
               <div class="form-group">
@@ -103,7 +113,7 @@
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
+              </div> -->
             </form>
           </div>
 

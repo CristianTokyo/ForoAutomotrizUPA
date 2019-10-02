@@ -1565,6 +1565,7 @@ textarea.form-control {
 	// padding: 6em 0;
 	@include media-breakpoint-down(lg){
 		background-position: center center !important;
+    border-radius: 10px;
 	}
 	.img{
 		display: block;
@@ -1575,6 +1576,7 @@ textarea.form-control {
 		}
 	}
 	.block-18{
+
 	}
 	.text{
 		strong.number{
