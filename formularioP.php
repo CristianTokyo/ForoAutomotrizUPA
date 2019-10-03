@@ -80,14 +80,14 @@
 </form>
 <?php if(isset($_POST['nov26'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
-        <table>
+        <table class="table table-striped">
           <tr>
             <td>09:00-11:00 </td>
             <td>Conferencia magistral  
-                Tendencias de la industria Automotriz 
-                
+                Tendencias de la industria Automotriz
                 <input type="checkbox" name="1" id="" value="1"  >
             </td>
+            <td></td>
           </tr>
           <tr>
              <td>11:00-12:30pm</td>
@@ -148,9 +148,10 @@
               Exposición de proyectos tecnológicos orientados al ramo  automotriz
               <input <input type="checkbox" name="10" id="" value="10"  >
             </td>
+            <td></td>
           </tr>
         </table>
-        <input type="submit"  name="guardar" value="Guardar">
+        <input type="submit"  class="btn btn-primary" name="guardar" value="Guardar">
         </form>
       <?php endif;   ?>
         </div>
@@ -158,13 +159,14 @@
 
 <?php if(isset($_POST['nov27'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
-        <table>
+        <table  class="table table-striped">
           <tr>
             <td>09:00-11:00 </td>
             <td>
                 Supplier development fot the OEM
                 <input type="checkbox" name="1" id="" value="1"  >
             </td>
+            <td></td>
           </tr>
           <tr>
              <td>11:00-12:30pm</td>
@@ -208,7 +210,7 @@
               </td>
           </tr>
         </table>
-        <input type="submit"  name="guardar" value="Guardar">
+        <input type="submit" class="btn btn-primary"  name="guardar" value="Guardar">
         </form>
         s<?php endif;   ?>
         </div>
