@@ -1374,13 +1374,13 @@ pre {
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #b8daff; }
+  background-color: ##0093CA; }
 
 .table-primary th,
 .table-primary td,
 .table-primary thead th,
 .table-primary tbody + tbody {
-  border-color: #7abaff; }
+  border-color: #fff; }
 
 .table-hover .table-primary:hover {
   background-color: #9fcdff; }
