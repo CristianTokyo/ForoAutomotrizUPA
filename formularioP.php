@@ -98,7 +98,6 @@
         <h1> 26 de Noviembre de 2019</h1>
         <table  class="table table-bordered table-hover ">
           <tr style="text-align: center" class = "table-primary">
-
             <th> Horario </th>
             <th> Tipo de Actividad</th>
             <th> Actividad </th>
@@ -155,6 +154,7 @@
             <td rowspan="2"><input type="radio" name="7" value="8" id="">
             <br><br><br><input type="radio" name="7" value="9" id=""></td>
           </tr>
+          <tr>
               <td>Taller</td>
               <td>Diseño de componentes automotrices</td>
               <td>MC. Juan Carlos Collazo Barrientos</td>
@@ -174,7 +174,7 @@
       <?php if(isset($_POST['nov27'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
           <h1> 27 de Noviembre de 2019</h1>
-        <table  class="table table-bordered table-hover ">
+        <table  class="table table-bordered">
           <tr style="text-align: center" class = "table-primary">
             <th> Horario </th>
             <th> Tipo de Actividad</th>
