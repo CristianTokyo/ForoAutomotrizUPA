@@ -67,27 +67,7 @@
       </div>
     </section>
 
-		<section class="ftco-section contact-section">
-      <div class="container">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h3">Información de contacto</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-3">
-            <p><span>Dirección:</span> Desarrollo Especial Talleres F.F.C.C., 20270 Aguascalientes, Ags.</p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Teléfono:</span> <a href="tel://1234567920">+52 444 00</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Correo Electrónico:</span> <a href="mailto:foroautomotriz@upa.edu.mx">foroautomotriz@upa.edu.mx</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Sitio WEB:</span> <a href="http://www.foroautomotrizags-upa.com/">www.foroautomotrizags-upa.com</a></p>
-          </div>
-        </div>
-       
+	   <br><br>
 <!-- Formulario para ellegit el taller  -->
 <!-- <input type="radio" name="" id=""> -->
 <!--Falta que cuando no haya información no lo muestre  -->
@@ -120,11 +100,11 @@
             <td>12:30-13:pm</td>
             <td>
               Recorrido de autoridades por los stands 
-                <input type="radio" name="3" value="3" id="">
+              <input type="radio" name="3" value="3"> 
             </td>
             <td>
               Concurso Modelado en solid works.Primera etapa  
-              <input type="radio" name="4" value="4" id="">
+              <input type="radio" name="4" value="4">
             </td>
           </tr>
           <tr>
@@ -157,7 +137,7 @@
                 <input type="radio" name="8" value="8" id="">
              </td>
              <td>
-               Taller 
+                Taller 
                 Diseño de componentes automotrices 
                <input type="radio" name="9" value="9" id="">
              </td>
@@ -172,7 +152,7 @@
         </table>
         <input type="submit"  name="guardar" value="Guardar">
         </form>
-        s<?php endif;   ?>
+      <?php endif;   ?>
         </div>
       </div>
 
@@ -233,6 +213,28 @@
         s<?php endif;   ?>
         </div>
       </div>
+    </section>
+
+    <section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-md-12 mb-4">
+            <h2 class="h3">Información de contacto</h2>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-3">
+            <p><span>Dirección:</span> Desarrollo Especial Talleres F.F.C.C., 20270 Aguascalientes, Ags.</p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Teléfono:</span> <a href="tel://1234567920">+52 444 00</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Correo Electrónico:</span> <a href="mailto:foroautomotriz@upa.edu.mx">foroautomotriz@upa.edu.mx</a></p>
+          </div>
+          <div class="col-md-3">
+            <p><span>Sitio WEB:</span> <a href="http://www.foroautomotrizags-upa.com/">www.foroautomotrizags-upa.com</a></p>
+          </div>
+        </div>
     </section>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
