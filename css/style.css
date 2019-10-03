@@ -889,8 +889,8 @@ pre {
   .col-md-5 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 41.66667%;
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%; }
+    flex: 0 0 41.6666%;
+    max-width: 100%; }
   .col-md-6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
@@ -900,7 +900,7 @@ pre {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 58.33333%;
     flex: 0 0 58.33333%;
-    max-width: 58.33333%; }
+    max-width: 100%; }
   .col-md-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 66.66667%;
@@ -8105,7 +8105,7 @@ h1, h2, h3, h4, h5,
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
-    border-radius: 2px; }
+    border-radius: 5px; }
     .ftco-navbar-light .navbar-nav > .nav-item.cta > a span {
       display: inline-block;
       color: #fff; }
@@ -9223,7 +9223,7 @@ textarea.form-control {
 
 @media (max-width: 1199.98px) {
   .ftco-counter {
-    background-position: center center !important; } }
+    background-position: center !important; } }
 
 .ftco-counter .img {
   display: block;
@@ -9258,7 +9258,7 @@ textarea.form-control {
 
 @media (max-width: 767.98px) {
   .ftco-counter .counter-wrap {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px;} }
 
 .block-20 {
   overflow: hidden;
