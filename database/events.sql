@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `idusr` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(100) NOT NULL,
   `pass` VARCHAR(100) NOT NULL,
+  `sent` INT(1) NOT NULL,
+  `form` INT(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`idusr`));
 
 -- -----------------------------------------------------
