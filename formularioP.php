@@ -66,11 +66,8 @@
         </div>
       </div>
     </section>
-
 	   <br><br>
-<!-- Formulario para ellegit el taller  -->
-<!-- <input type="radio" name="" id=""> -->
-<!--Falta que cuando no haya información no lo muestre  -->
+<h2 class="h2">Elija sus eventos</h2>
 <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
 <input class="btn btn-primary" type="submit"   name="nov26"    value="26 Noviembre 2019">
 </form>
