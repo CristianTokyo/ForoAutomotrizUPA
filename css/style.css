@@ -8057,7 +8057,7 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 10px; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 17px;
+    font-size: 20px;
     padding-top: .9rem;
     padding-bottom: .9rem;
     padding-left: 5px;
@@ -9247,11 +9247,11 @@ textarea.form-control {
   display: block;
   font-size: 16px;
   color: rgba(255, 255, 255, 255);
-  margin-bottom: 10px; }
+  margin-bottom: 1px; }
 
 .ftco-counter .icon {
-  width: 120px;
-  height: 70px;
+  width: 100px;
+  height: 30px;
   margin: 0 auto;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
