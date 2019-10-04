@@ -96,78 +96,79 @@
       <?php if(isset($_POST['nov26'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
         <h1> 26 de Noviembre de 2019</h1>
-        <table  class="table table-bordered table-hover ">
-          <thead class = "table-primary">
-          <tr style="text-align: center" >
-            <th> Horario </th>
-            <th> Tipo de Actividad</th>
-            <th> Actividad </th>
-            <th> Expositor </th>
-            <th> Asistire </th>
-          </tr>
+        <table  class="table table-bordered table-responsive table-hover">
+          <thead class = "thead-dark">
+            <tr style="text-align: center" >
+              <th> Horario </th>
+              <th> Tipo de Actividad</th>
+              <th> Actividad </th>
+              <th> Expositor </th>
+              <th> Asistire </th>
+            </tr>
           </thead>
-          <tr>
-            <th>10:00 -11:00 </th>
-            <td>Conferencia magistral</td>
-            <td>Tendencias de la industria Automotriz</td>
-            <td>Ing. Armando Ávila Moreno</td>
-            <td> <input type="checkbox" name="1" id="" value="1"  > </td>
-          </tr>
-          <tr>
-             <th>11:00-12:30</th>
-             <td>Panel Magistral</td>
-             <td>Tendencias del sector automotriz y la pertinencia del sector educativo</td>
-             <td>Dr. Herminio Baltazar Cisneros</td>
-             <td><input type="checkbox" name="2" id="" value="2"  ></td>
-          </tr>
-          <tr>
-            <th>12:30-13:00</th>
-            <td>Concurso</td>
-            <td>Modelado en solid works.Primera etapa</td>
-            <td></td>
-            <td><input type="checkbox" name="4" value="4" id=""></td>
-          </tr>
-          <tr>
-            <th>13:00-15:00</th>
-            <td>Conferencia</td>
-            <td>Industria 4.0</td>
-            <td>Ina Helena Ringk Seterbakken</td>
-            <td><input <input type="checkbox" name="5" value="5" id="" value=""  ></td>
-          </tr>
-          <tr>
-              <th rowspan ="2">13:15-14:15</th>
+          <tbody>
+            <tr>
+              <th>10:00-11:00 </th>
+              <td>Conferencia magistral</td>
+              <td>Tendencias de la industria Automotriz</td>
+              <td>Ing. Armando Ávila Moreno</td>
+              <td> <input type="checkbox" name="1" id="" value="1"  > </td>
+            </tr>
+            <tr>
+               <th>11:00-12:30</th>
+               <td>Panel Magistral</td>
+               <td>Tendencias del sector automotriz y la pertinencia del sector educativo</td>
+               <td>Dr. Herminio Baltazar Cisneros</td>
+               <td><input type="checkbox" name="2" id="" value="2"  ></td>
+            </tr>
+            <tr>
+              <th>12:30-13:00</th>
+              <td>Concurso</td>
+              <td>Modelado en solid works.Primera etapa</td>
+              <td></td>
+              <td><input type="checkbox" name="4" value="4" id=""></td>
+            </tr>
+            <tr>
+              <th>13:00-15:00</th>
               <td>Conferencia</td>
-              <td>Nuevo Lenguaje de comunicación de la calidad en las empresas</td>
-              <td>Ing. Salvador Esparza del Pozo</td>
-              <th rowspan="2"><input type="radio" name="6" value="6" id="">
-              <br><br><br><input type="radio" name="6" value="7" id=""></th>
-          </tr>
-          <tr>
-              <td>Conferencia</td>
-              <td>El impacto y desarrolo de la manufactura automotriz</td>
-              <td>Ing. Sergio Luna Flores</td>
-
-          </tr>
-          <tr>
-            <th rowspan="2">16:15-18:00</th>
-            <td>Taller</td>
-            <td>Lean Manufacturing. Identificación y solución de problemas en una cadena de valor</td>
-            <td>Dr. Julio Alberto Márquez Landa</td>
-            <td rowspan="2"><input type="radio" name="7" value="8" id="">
-            <br><br><br><input type="radio" name="7" value="9" id=""></td>
-          </tr>
-          <tr>
-              <td>Taller</td>
-              <td>Diseño de componentes automotrices</td>
-              <td>MC. Juan Carlos Collazo Barrientos</td>
-          </tr>
-          <tr>
-            <th>12:00-19:00</th>
-            <td>ExpoProyectos</td>
-            <td>Inscribirme para participar con mi proyecto</td>
-            <td></td>
-            <td><input <input type="checkbox" name="10" id="" value="10"></td>
-          </tr>
+              <td>Industria 4.0</td>
+              <td>Ina Helena Ringk Seterbakken</td>
+              <td><input <input type="checkbox" name="5" value="5" id="" value=""  ></td>
+            </tr>
+            <tr>
+                <th rowspan ="2">13:15-14:15</th>
+                <td rowspan="2">Conferencia
+                <br><br><br>Conferencia</td>
+                <td rowspan="2">Nuevo Lenguaje de comunicación de la calidad en las empresas
+                <br><br><br>El impacto y desarrolo de la manufactura automotriz</td>
+                <td rowspan="2">Ing. Salvador Esparza del Pozo
+                <br><br>Ing. Sergio Luna Flores</td>
+                <th rowspan="2"><input type="radio" name="6" value="6" id="">
+                <br><br><br><input type="radio" name="6" value="7" id=""></th>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <th rowspan="2">16:15-18:00</th>
+              <td rowspan="2">Taller
+              <br><br><br>Taller</td>
+              <td rowspan="2">Lean Manufacturing. Identificación y solución de problemas en una cadena de valor
+              <br><br>Diseño de componentes automotrices</td>
+              <td rowspan="2">Dr. Julio Alberto Márquez Landa
+              <br><br>MC. Juan Carlos Collazo Barrientos</td>
+              <td rowspan="2"><input type="radio" name="7" value="8" id="">
+              <br><br><br><input type="radio" name="7" value="9" id=""></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <th>12:00-19:00</th>
+              <td>ExpoProyectos</td>
+              <td>Inscribirme para participar con mi proyecto</td>
+              <td></td>
+              <td><input <input type="checkbox" name="10" id="" value="10"></td>
+            </tr>
+        </tbody>
         </table>
         <input type="submit"  name="guardar" value="Guardar"class="btn btn-primary">
         </form>
@@ -176,67 +177,71 @@
       <?php if(isset($_POST['nov27'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
           <h1> 27 de Noviembre de 2019</h1>
-        <table  class="table table-bordered">
-          <tr style="text-align: center" class = "table-primary">
-            <th> Horario </th>
-            <th> Tipo de Actividad</th>
-            <th> Actividad </th>
-            <th> Expositor </th>
-            <th> Asistire </th>
-          </tr>
-          <tr >
-            <th>09:00-11:00 </th>
-            <td>Conferencia Magistral</td>
-            <td>El desafío de la excelencia en la cadena de suministro</td>
-            <td>Frank Nalepa</td>
-            <td><input type="checkbox" name="1" id="" value="1"  ></td>
-          </tr>
-          <tr>
-             <th rowspan="2">11:00-12:30</th>
-             <td>Panel</td>
-             <td>Jóvenes emprendedores en la proveeduria automotriz de autopartes</td>
-             <td>Ing. Abraham Eduardo Pinedo Martínez</td>
-             <td rowspan="2"><input type="radio" name="2" value="2" id="">
-               <br><br><br><input type="radio" name="2" value="2" id=""></td>
-          </tr>
-          <tr>
-             <td>Conferencia</td>
-             <td>Importancia del factor humano  en  el sector automotriz</td>
-             <td>Ma. de Lourdes Quijas Jiménez</td>
-          </tr>
-          <tr>
-            <th rowspan="2">12:45-14:30</th>
-            <td>Conferencia</td>
-            <td>Desarrollo de la PYMES para la proveeduria automotriz</td>
-            <td>Ing. Armando Gómez de la Torre</td>
-            <td rowspan="2"><input type="radio" name="3" value="3" id="">
-            <br><br><br><input type="radio" name="3" value="4" id=""></td>
-          </tr>
-          <tr>
-            <td>Conferencia</td>
-            <td>Innovacion y creatividad</td>
-            <td>MDA. Juan Camilo Mesa Jaramillo</td>
-          </tr>
-          <tr>
-            <th>16:00-19:00</th>
-            <td>Concurso</td>
-            <td>Moldelado en Solid Works</td>
-            <td></td>
-            <td><input <input type="checkbox" name="5" value="5" id="" value=""  ></td>
-          </tr>
-          <tr>
-              <th rowspan="2">16:00-18:30</th>
-              <td>Taller</td>
-              <td>Logística</td>
-              <td>Álvaro Dávila</td>
-              <td rowspan="2"><input type="radio" name="6" value="6" id="">
-              <br><br><br><input type="radio" name="6" value="7" id=""></td>
-          </tr>
-          <tr>
-              <td>Conferencia</td>
-              <td>Es tiempo de crear</td>
-              <td>Ing. Cuitláhuac Pérez Cerros</td>
-          </tr>
+        <table  class="table table-bordered table-responsive table-hover">
+          <thead class = "thead-dark">
+            <tr style="text-align: center" class = "table-primary">
+              <th> Horario </th>
+              <th> Tipo de Actividad</th>
+              <th> Actividad </th>
+              <th> Expositor </th>
+              <th> Asistire </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+              <th>09:00-11:00 </th>
+              <td>Conferencia Magistral</td>
+              <td>El desafío de la excelencia en la cadena de suministro</td>
+              <td>Frank Nalepa</td>
+              <td><input type="checkbox" name="1" id="" value="1"  ></td>
+            </tr>
+            <tr>
+               <th rowspan="2">11:00-12:30</th>
+               <td rowspan="2">Panel
+               <br><br><br>Conferencia</td>
+               <td rowspan="2">Jóvenes emprendedores en la proveeduria automotriz de autopartes
+               <br><br>Importancia del factor humano  en  el sector automotriz</td>
+               <td rowspan="2">Ing. Abraham Eduardo Pinedo Martínez
+               <br><br>Ma. de Lourdes Quijas Jiménez</td>
+               <td rowspan="2"><input type="radio" name="2" value="2" id="">
+                 <br><br><br><input type="radio" name="2" value="2" id=""></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <th rowspan="2">12:45-14:30</th>
+              <td rowspan="2">Conferencia
+              <br><br>Conferencia</td>
+              <td rowspan="2">Desarrollo de la PYMES para la proveeduria automotriz
+              <br><br>Innovacion y creatividad</td>
+              <td rowspan="2">Ing. Armando Gómez de la Torre
+              <br><br>MDA. Juan Camilo Mesa Jaramillo</td>
+              <td rowspan="2"><input type="radio" name="3" value="3" id="">
+              <br><br><input type="radio" name="3" value="4" id=""></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <th>16:00-19:00</th>
+              <td>Concurso</td>
+              <td>Moldelado en Solid Works</td>
+              <td></td>
+              <td><input <input type="checkbox" name="5" value="5" id="" value=""  ></td>
+            </tr>
+            <tr>
+                <th rowspan="2">16:00-18:30</th>
+                <td rowspan="2">Taller
+                <br><br>Conferencia</td>
+                <td rowspan="2">Logística
+                <br><br>Es tiempo de crear</td>
+                <td rowspan="2">Álvaro Dávila
+                <br><br>Ing. Cuitláhuac Pérez Cerros</td>
+                <td rowspan="2"><input type="radio" name="6" value="6" id="">
+                <br><br><br><input type="radio" name="6" value="7" id=""></td>
+            </tr>
+            <tr>
+            </tr>
+          <tbody>
         </table>
         <input type="submit"  name="guardar" value="Guardar" class="btn btn-primary">
         </form>

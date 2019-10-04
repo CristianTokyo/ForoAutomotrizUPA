@@ -1493,7 +1493,7 @@ pre {
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #c6c8ca; }
+  background-color: #0093CA; }
 
 .table-dark th,
 .table-dark td,
@@ -1520,7 +1520,7 @@ pre {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #212529;
+  background-color: #0093CA;
   border-color: #32383e; }
 
 .table .thead-light th {
