@@ -97,13 +97,15 @@
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
         <h1> 26 de Noviembre de 2019</h1>
         <table  class="table table-bordered table-hover ">
-          <tr style="text-align: center" class = "table-primary">
+          <thead class = "table-primary">
+          <tr style="text-align: center" >
             <th> Horario </th>
             <th> Tipo de Actividad</th>
             <th> Actividad </th>
             <th> Expositor </th>
             <th> Asistire </th>
           </tr>
+          </thead>
           <tr>
             <th>10:00 -11:00 </th>
             <td>Conferencia magistral</td>
