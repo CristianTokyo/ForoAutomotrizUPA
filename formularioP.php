@@ -74,6 +74,7 @@
     <div class = "container">
       <div class = "heading mb-5 pt-5 pl-md-5">
         <h2>Selección de actividades por día</h2>
+        <h3>La disponibilidad de las actividades está sujeta al cupo de las mismas.</h3>
       </div>
       <div class="row">
         <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
@@ -179,7 +180,7 @@
           <h1> 27 de Noviembre de 2019</h1>
         <table  class="table table-bordered table-responsive table-hover">
           <thead class = "thead-dark">
-            <tr style="text-align: center" class = "table-primary">
+            <tr style="text-align: center">
               <th> Horario </th>
               <th> Tipo de Actividad</th>
               <th> Actividad </th>
