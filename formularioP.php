@@ -104,7 +104,7 @@
               <th> Tipo de Actividad</th>
               <th> Actividad </th>
               <th> Expositor </th>
-              <th> Asistire </th>
+              <th> Asistiré </th>
             </tr>
           </thead>
           <tbody>
@@ -185,7 +185,7 @@
               <th> Tipo de Actividad</th>
               <th> Actividad </th>
               <th> Expositor </th>
-              <th> Asistire </th>
+              <th> Asistiré </th>
             </tr>
         </thead>
         <tbody>
