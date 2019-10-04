@@ -45,7 +45,6 @@
                 </div>
                 <form action="validate.php" method="post">
                     <div class="modal-body">
-
                         <label>E-mail:</label>
                         <input type="email" class="form-control" name="email" placeholder="ejemplo@gmail.com" required/><br>
                         <label>Ultimos 4 digitos del movimiento de pago</label>

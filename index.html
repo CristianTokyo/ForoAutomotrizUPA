@@ -46,13 +46,37 @@
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
 	          <li class="nav-item cta mr-md-2"><a href="#registro" class="nav-link">Registro</a></li>
             <li class="nav-item cta mr-md-2"><a href="stands.html" class="nav-link">Stand</a></li>
-            <li class="nav-item"><a href="https://vivaaguascalientes.com/" class="nav-link"><img src= "images/VivaAguascalientes.png" width="100" height="50"></a></li>
+            <li class="nav-item cta mr-md-2"><a href="#" class="nav-link" data-toggle="modal" data-target="#login">Ingresar</a></li>
+            <!--<li class="nav-item"><a href="https://vivaaguascalientes.com/" class="nav-link"><img src= "images/VivaAguascalientes.png" width="100" height="50"></a></li>-->
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
-
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ingrese Sus Datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="validate.php" method="post">
+                    <div class="modal-body">
+                        <label>E-mail:</label>
+                        <input type="email" class="form-control" name="email" placeholder="ejemplo@gmail.com" required/><br>
+                        <label>Ultimos 4 digitos del movimiento de pago</label>
+                        <input type="password" class="form-control" name="pass" placeholder="####" required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <input type="submit" class="btn btn-primary" name="button" value="Ingresar"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- body principal -->
     <div class="hero-wrap" style="background-image: url('images/portada_foro.jpg');" data-stellar-background-ratio="0.5">
