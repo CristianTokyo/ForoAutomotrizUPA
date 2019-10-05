@@ -1,20 +1,25 @@
 <?php
 require("conexion.php");
-if(isset($_POST['guardar'])){
+//print_r($_POST);
+if(!empty($_POST)){
+  if(isset($_POST['dia1']))
+  {
     $input  =  array();
-    for ($i=1; $i <8 ; $i++)
-    {
-        if($_POST[$i])
-        {
-          $input[$i]= $_POST[$i];
-          echo "<br>";
-          echo "dentro ";
-          echo $input[$i];
-        }
+    $postArreglo = array(1,2,3,4,5,6,7);
+
+    foreach ($postArreglo as $postNombre) {
+      if (array_key_exists($postNombre, $_POST)){
+        $input[] = $_POST[$postNombre];
+      }
     }
 
-    var_dump($input);
-
+    foreach ($input as $key => $value) {
+      echo "Evento ";
+      echo $value;
+      echo "<br>";
+    }
+  }
 }
-
+else
+  echo "No existen POST";
 require 'formularioP.php';

@@ -78,14 +78,14 @@
       </div>
       <div class="row">
         <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
-          <div class="block-18 text-center py-4 bg-primary mb-4">
+          <div class="block-18 text-center py-4 mb-4">
             <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
             <input class="btn btn-primary" type="submit"   name="nov26"    value="26 Noviembre 2019">
             </form>
         </div>
       </div>
       <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
-        <div class="block-18 text-center py-4 bg-primary mb-4">
+        <div class="block-18 text-center py-4 mb-4">
           <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
           <input class="btn btn-primary" type="submit"   name="nov27"    value="27 Noviembre 2019">
           </form>
@@ -144,8 +144,8 @@
                 <br><br><br>El impacto y desarrolo de la manufactura automotriz</td>
                 <td rowspan="2">Ing. Salvador Esparza del Pozo
                 <br><br>Ing. Sergio Luna Flores</td>
-                <th rowspan="2"><input type="radio" name="5" value="1" id="">
-                <br><br><br><input type="radio" name="5" value="2" id=""></th>
+                <th rowspan="2"><input type="radio" name="5" value="5" id="">
+                <br><br><br><input type="radio" name="5" value="6" id=""></th>
             </tr>
             <tr>
             </tr>
@@ -157,8 +157,8 @@
               <br><br>Diseño de componentes automotrices</td>
               <td rowspan="2">Dr. Julio Alberto Márquez Landa
               <br><br>MC. Juan Carlos Collazo Barrientos</td>
-              <td rowspan="2"><input type="radio" name="6" value="1" id="">
-              <br><br><br><input type="radio" name="6" value="2" id=""></td>
+              <td rowspan="2"><input type="radio" name="6" value="7" id="">
+              <br><br><br><input type="radio" name="6" value="8" id=""></td>
             </tr>
             <tr>
             </tr>
@@ -167,11 +167,11 @@
               <td>ExpoProyectos</td>
               <td>Inscribirme para participar con mi proyecto</td>
               <td></td>
-              <td><input <input type="checkbox" name="7" id="" value="7"></td>
+              <td><input <input type="checkbox" name="7" id="" value="9"></td>
             </tr>
         </tbody>
         </table>
-        <input type="submit"  name="guardar" value="Guardar"class="btn btn-primary">
+        <input type="submit"  name="dia1" value="Guardar"class="btn btn-primary">
         </form>
         <?php endif;   ?>
 
