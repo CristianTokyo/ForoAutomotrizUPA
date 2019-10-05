@@ -19,4 +19,5 @@ if (isset($_POST["button"])) {
     else {
      header("location:formulario.php "); // poner a vista de formulario
     }
+    //mysqli_close($conexion);
 }

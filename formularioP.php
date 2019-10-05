@@ -93,7 +93,7 @@
       </div>
     </div>
   </section>
-        <div class = "container">
+    <div class = "container">
       <?php if(isset($_POST['nov26'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
         <h1> 26 de Noviembre de 2019</h1>
@@ -127,14 +127,14 @@
               <td>Concurso</td>
               <td>Modelado en solid works.Primera etapa</td>
               <td></td>
-              <td><input type="checkbox" name="4" value="4" id=""></td>
+              <td><input type="checkbox" name="3" value="3" id=""></td>
             </tr>
             <tr>
               <th>13:00-15:00</th>
               <td>Conferencia</td>
               <td>Industria 4.0</td>
               <td>Ina Helena Ringk Seterbakken</td>
-              <td><input <input type="checkbox" name="5" value="5" id="" value=""  ></td>
+              <td><input <input type="checkbox" name="4" value="4" id=""></td>
             </tr>
             <tr>
                 <th rowspan ="2">13:15-14:15</th>
@@ -144,8 +144,8 @@
                 <br><br><br>El impacto y desarrolo de la manufactura automotriz</td>
                 <td rowspan="2">Ing. Salvador Esparza del Pozo
                 <br><br>Ing. Sergio Luna Flores</td>
-                <th rowspan="2"><input type="radio" name="6" value="6" id="">
-                <br><br><br><input type="radio" name="6" value="7" id=""></th>
+                <th rowspan="2"><input type="radio" name="5" value="1" id="">
+                <br><br><br><input type="radio" name="5" value="2" id=""></th>
             </tr>
             <tr>
             </tr>
@@ -157,8 +157,8 @@
               <br><br>Diseño de componentes automotrices</td>
               <td rowspan="2">Dr. Julio Alberto Márquez Landa
               <br><br>MC. Juan Carlos Collazo Barrientos</td>
-              <td rowspan="2"><input type="radio" name="7" value="8" id="">
-              <br><br><br><input type="radio" name="7" value="9" id=""></td>
+              <td rowspan="2"><input type="radio" name="6" value="1" id="">
+              <br><br><br><input type="radio" name="6" value="2" id=""></td>
             </tr>
             <tr>
             </tr>
@@ -167,7 +167,7 @@
               <td>ExpoProyectos</td>
               <td>Inscribirme para participar con mi proyecto</td>
               <td></td>
-              <td><input <input type="checkbox" name="10" id="" value="10"></td>
+              <td><input <input type="checkbox" name="7" id="" value="7"></td>
             </tr>
         </tbody>
         </table>
