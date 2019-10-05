@@ -11,7 +11,11 @@ if (isset($_POST["button"])) {
 
 
     if ($pass != $row[0]|| $email != $row[1]) {
-      echo "<script> alert('Verifique Los Datos'); </script>";}
+      echo "<script>";
+      echo "alert('Datos incorrectos');";
+      echo "window.location = 'index.html ';";
+      echo "</script>";
+    }
     else {
      header("location:formulario.php "); // poner a vista de formulario
     }
