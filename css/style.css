@@ -235,7 +235,13 @@ input[type="radio"],
 input[type="checkbox"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0; }
+  padding: 0;
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px; }
 
 input[type="date"],
 input[type="time"],
@@ -883,9 +889,9 @@ pre {
     max-width: 25%; }
   .col-md-4 {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%; }
+    -ms-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%; }
   .col-md-5 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 41.66667%;
@@ -1374,13 +1380,13 @@ pre {
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #b8daff; }
+  background-color: ##0093CA; }
 
 .table-primary th,
 .table-primary td,
 .table-primary thead th,
 .table-primary tbody + tbody {
-  border-color: #7abaff; }
+  border-color: #fff; }
 
 .table-hover .table-primary:hover {
   background-color: #9fcdff; }
@@ -1493,7 +1499,7 @@ pre {
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #c6c8ca; }
+  background-color: #0093CA; }
 
 .table-dark th,
 .table-dark td,
@@ -1520,7 +1526,7 @@ pre {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #212529;
+  background-color: #0093CA;
   border-color: #32383e; }
 
 .table .thead-light th {
@@ -8051,7 +8057,7 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 10px; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 17px;
+    font-size: 20px;
     padding-top: .9rem;
     padding-bottom: .9rem;
     padding-left: 5px;
@@ -9241,11 +9247,11 @@ textarea.form-control {
   display: block;
   font-size: 16px;
   color: rgba(255, 255, 255, 255);
-  margin-bottom: 10px; }
+  margin-bottom: 1px; }
 
 .ftco-counter .icon {
-  width: 120px;
-  height: 70px;
+  width: 100px;
+  height: 30px;
   margin: 0 auto;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;

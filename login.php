@@ -45,10 +45,9 @@
                 </div>
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])  ?>" method="post">
                     <div class="modal-body">
-
                         <label>E-mail:</label>
                         <input type="email" class="form-control" name="email" placeholder="ejemplo@gmail.com" required/><br>
-                        <label>Ultimos 4 Dígitos de la Cuenta:</label>
+                        <label>Ultimos 4 digitos del movimiento de pago</label>
                         <input type="password" class="form-control" name="pass" placeholder="####" required />
                     </div>
                     <div class="modal-footer">

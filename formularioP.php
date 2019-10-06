@@ -67,44 +67,36 @@
       </div>
     </section>
 
-		<section class="ftco-section contact-section">
-      <div class="container">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h3">Información de contacto</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-3">
-            <p><span>Dirección:</span> Desarrollo Especial Talleres F.F.C.C., 20270 Aguascalientes, Ags.</p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Teléfono:</span> <a href="tel://1234567920">+52 449 442 14 00</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Correo Electrónico:</span> <a href="mailto:foroautomotriz@upa.edu.mx">foroautomotriz@upa.edu.mx</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Sitio WEB:</span> <a href="http://www.foroautomotrizags-upa.com/">www.foroautomotrizags-upa.com</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
 <!-- Formulario para ellegit el taller  -->
 <!-- <input type="radio" name="" id=""> -->
 <!--Falta que cuando no haya información no lo muestre  -->
-
   <section class ="ftco-section">
     <div class = "container">
-      <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-      <input class="btn btn-primary" type="submit"   name="nov26"    value="26 Noviembre 2019">
-      </form>
-      <br>
-      <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-      <input class="btn btn-primary" type="submit"   name="nov27"    value="27 Noviembre 2019">
-      </form>
-
+      <div class = "heading mb-5 pt-5 pl-md-5">
+        <h2>Selección de actividades por día</h2>
+        <h3>La disponibilidad de las actividades está sujeta al cupo de las mismas.</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 text-center py-4 mb-4">
+            <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+            <input class="btn btn-primary" type="submit"   name="nov26"    value="26 Noviembre 2019">
+            </form>
+        </div>
+      </div>
+      <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 text-center py-4 mb-4">
+          <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+          <input class="btn btn-primary" type="submit"   name="nov27"    value="27 Noviembre 2019">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+    <div class = "container">
       <?php if(isset($_POST['nov26'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
+<<<<<<< HEAD
         <table class="table table-striped">
           <tr>
             <th> Horario </th>
@@ -173,12 +165,89 @@
             <td></td>
             <td><input <input type="checkbox" name="7" id="7" value="10"></td>
           </tr>
+=======
+        <h1> 26 de Noviembre de 2019</h1>
+        <table  class="table table-bordered table-responsive table-hover">
+          <thead class = "thead-dark">
+            <tr style="text-align: center" >
+              <th> Horario </th>
+              <th> Tipo de Actividad</th>
+              <th> Actividad </th>
+              <th> Expositor </th>
+              <th> Asistiré </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>10:00-11:00 </th>
+              <td>Conferencia magistral</td>
+              <td>Tendencias de la industria Automotriz</td>
+              <td>Ing. Armando Ávila Moreno</td>
+              <td> <input type="checkbox" name="1" id="" value="1"  > </td>
+            </tr>
+            <tr>
+               <th>11:00-12:30</th>
+               <td>Panel Magistral</td>
+               <td>Tendencias del sector automotriz y la pertinencia del sector educativo</td>
+               <td>Dr. Herminio Baltazar Cisneros</td>
+               <td><input type="checkbox" name="2" id="" value="2"  ></td>
+            </tr>
+            <tr>
+              <th>12:30-13:00</th>
+              <td>Concurso</td>
+              <td>Modelado en solid works.Primera etapa</td>
+              <td></td>
+              <td><input type="checkbox" name="3" value="3" id=""></td>
+            </tr>
+            <tr>
+              <th>13:00-15:00</th>
+              <td>Conferencia</td>
+              <td>Industria 4.0</td>
+              <td>Ina Helena Ringk Seterbakken</td>
+              <td><input <input type="checkbox" name="4" value="4" id=""></td>
+            </tr>
+            <tr>
+                <th rowspan ="2">13:15-14:15</th>
+                <td rowspan="2">Conferencia
+                <br><br><br>Conferencia</td>
+                <td rowspan="2">Nuevo Lenguaje de comunicación de la calidad en las empresas
+                <br><br><br>El impacto y desarrolo de la manufactura automotriz</td>
+                <td rowspan="2">Ing. Salvador Esparza del Pozo
+                <br><br>Ing. Sergio Luna Flores</td>
+                <th rowspan="2"><input type="radio" name="5" value="5" id="">
+                <br><br><br><input type="radio" name="5" value="6" id=""></th>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <th rowspan="2">16:15-18:00</th>
+              <td rowspan="2">Taller
+              <br><br><br>Taller</td>
+              <td rowspan="2">Lean Manufacturing. Identificación y solución de problemas en una cadena de valor
+              <br><br>Diseño de componentes automotrices</td>
+              <td rowspan="2">Dr. Julio Alberto Márquez Landa
+              <br><br>MC. Juan Carlos Collazo Barrientos</td>
+              <td rowspan="2"><input type="radio" name="6" value="7" id="">
+              <br><br><br><input type="radio" name="6" value="8" id=""></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <th>12:00-19:00</th>
+              <td>ExpoProyectos</td>
+              <td>Inscribirme para participar con mi proyecto</td>
+              <td></td>
+              <td><input <input type="checkbox" name="7" id="" value="9"></td>
+            </tr>
+        </tbody>
+>>>>>>> 17ac4230d7806f2125f372c3581eafa37078ada8
         </table>
         <button    name="guardar" value="Guardar""   >Guardar </button>
         </form>
         <?php endif;   ?>
 
       <?php if(isset($_POST['nov27'])):   ?>
+<<<<<<< HEAD
         <form action="formulario.php" method="POST"  class="bg-light p-5 contact-form">
         <table  class="table table-striped">
           <tr>
@@ -252,33 +321,85 @@
   
         <input type="submit" class="btn btn-primary"  name="guardar27" value="Guardar">
 
+=======
+        <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
+          <h1> 27 de Noviembre de 2019</h1>
+        <table  class="table table-bordered table-responsive table-hover">
+          <thead class = "thead-dark">
+            <tr style="text-align: center">
+              <th> Horario </th>
+              <th> Tipo de Actividad</th>
+              <th> Actividad </th>
+              <th> Expositor </th>
+              <th> Asistiré </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+              <th>09:00-11:00 </th>
+              <td>Conferencia Magistral</td>
+              <td>El desafío de la excelencia en la cadena de suministro</td>
+              <td>Frank Nalepa</td>
+              <td><input type="checkbox" name="8" id="" value="10"  ></td>
+            </tr>
+            <tr>
+               <th rowspan="2">11:00-12:30</th>
+               <td rowspan="2">Panel
+               <br><br><br>Conferencia</td>
+               <td rowspan="2">Jóvenes emprendedores en la proveeduria automotriz de autopartes
+               <br><br>Importancia del factor humano  en  el sector automotriz</td>
+               <td rowspan="2">Ing. Abraham Eduardo Pinedo Martínez
+               <br><br>Ma. de Lourdes Quijas Jiménez</td>
+               <td rowspan="2"><input type="radio" name="9" value="11" id="">
+                 <br><br><br><input type="radio" name="9" value="12" id=""></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <th rowspan="2">12:45-14:30</th>
+              <td rowspan="2">Conferencia
+              <br><br>Conferencia</td>
+              <td rowspan="2">Desarrollo de la PYMES para la proveeduria automotriz
+              <br><br>Innovacion y creatividad</td>
+              <td rowspan="2">Ing. Armando Gómez de la Torre
+              <br><br>MDA. Juan Camilo Mesa Jaramillo</td>
+              <td rowspan="2"><input type="radio" name="10" value="13" id="">
+              <br><br><input type="radio" name="10" value="14" id=""></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+              <th>16:00-19:00</th>
+              <td>Concurso</td>
+              <td>Moldelado en Solid Works</td>
+              <td></td>
+              <td><input <input type="checkbox" name="11" value="15" id="" value=""  ></td>
+            </tr>
+            <tr>
+                <th rowspan="2">16:00-18:30</th>
+                <td rowspan="2">Taller
+                <br><br>Conferencia</td>
+                <td rowspan="2">Logística
+                <br><br>Es tiempo de crear</td>
+                <td rowspan="2">Álvaro Dávila
+                <br><br>Ing. Cuitláhuac Pérez Cerros</td>
+                <td rowspan="2"><input type="radio" name="12" value="16" id="">
+                <br><br><br><input type="radio" name="12" value="17" id=""></td>
+            </tr>
+            <tr>
+            </tr>
+          <tbody>
+        </table>
+        <input type="submit"  name="guardar" value="Guardar" class="btn btn-primary">
+>>>>>>> 17ac4230d7806f2125f372c3581eafa37078ada8
         </form>
         <?php endif;   ?>
     </div>
-  </section>
+    <br>
 
 
-    <section class="ftco-section contact-section">
-      <div class="container">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h3">Información de contacto</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-3">
-            <p><span>Dirección:</span> Desarrollo Especial Talleres F.F.C.C., 20270 Aguascalientes, Ags.</p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Teléfono:</span> <a href="tel://1234567920">+52 444 00</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Correo Electrónico:</span> <a href="mailto:foroautomotriz@upa.edu.mx">foroautomotriz@upa.edu.mx</a></p>
-          </div>
-          <div class="col-md-3">
-            <p><span>Sitio WEB:</span> <a href="http://www.foroautomotrizags-upa.com/">www.foroautomotrizags-upa.com</a></p>
-          </div>
-        </div>
-    </section>
+
+
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">

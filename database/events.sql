@@ -66,7 +66,7 @@ INSERT INTO `types` (`idtype`, `type`) VALUES (null, 'Exposición');
 
 
 INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 1,"Tendencias de la Industria Automotriz","Ing. Armando Ávila Moreno","Vicepresidente de Manufactura de Nissan Mexicana","10:00","11:00",26,100);
-INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 2,"Tendencias de la Industria Automotriz y la Pertinencia del Sector Educativo","Dr. Herminio Baltazar Cisneros ","Coordinador General de las Universidades Tecnológicas y Politécnicas y Secretarios de Educación de los Estados de Aguascalientes, Querétaro, Guanajuato, San Luis Potosí y Jalisco","11:00","12:30",26,100);
+INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 2,"Tendencias de la Industria Automotriz y la Pertinencia del Sector Educativo","Dr. Herminio Baltazar Cisneros ","Coordinador General de las Universidades Tecnológicas y Politécnicas","11:00","12:30",26,100);
 INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 3,"Recorrido de Autoridades por los Stands","-","-","12:30","13:00",26,100);
 INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 4,"Concurso Modelado en Solid Works. Primera Etapa","-","-","12:30","13:00",26,100);
 INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 5,"Industria 4.0","Ina Helena Ringk Seterbakken","Proyect Manager of Aguascalientes Continental","13:00","15:00",26,100);
