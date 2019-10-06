@@ -271,8 +271,6 @@
           <tbody>
         </table>
         <input type="submit"  name="guardar" value="Guardar" class="btn btn-primary">
-        <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
-
         </form>
         <?php endif;   ?>
     </div>
