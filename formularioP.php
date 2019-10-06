@@ -252,11 +252,6 @@
           <tbody>
         </table>
         <input type="submit"  name="guardar" value="Guardar" class="btn btn-primary">
-<<<<<<< HEAD
-=======
-        <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
-
->>>>>>> 334263882559c82cd25616a3dd46f5230ca84e4c
         </form>
         <?php endif;   ?>
     </div>
