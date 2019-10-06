@@ -43,7 +43,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="validate.php" method="post">
+                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])  ?>" method="post">
                     <div class="modal-body">
                         <label>E-mail:</label>
                         <input type="email" class="form-control" name="email" placeholder="ejemplo@gmail.com" required/><br>

@@ -97,6 +97,7 @@
     <div class = "container">
       <?php if(isset($_POST['nov26'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
+
         <h1> 26 de Noviembre de 2019</h1>
         <table  class="table table-bordered table-responsive table-hover">
           <thead class = "thead-dark">
@@ -171,13 +172,17 @@
               <td><input <input type="checkbox" name="tag_7" id="" value="9"></td>
             </tr>
         </tbody>
+
         </table>
+
         <input type="submit"  name="guardar" value="Guardar"class="btn btn-primary">
         <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
+
         </form>
         <?php endif;   ?>
 
       <?php if(isset($_POST['nov27'])):   ?>
+
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
           <h1> 27 de Noviembre de 2019</h1>
         <table  class="table table-bordered table-responsive table-hover">
@@ -247,7 +252,8 @@
           <tbody>
         </table>
         <input type="submit"  name="guardar" value="Guardar" class="btn btn-primary">
-          <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
+        <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
+
         </form>
         <?php endif;   ?>
     </div>
@@ -324,7 +330,6 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -340,6 +345,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/formulario.js"></script>
 
   </body>
 </html>
