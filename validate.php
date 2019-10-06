@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php
 if (isset($_POST["button"])) {
 
     require_once("conexion.php");
@@ -32,4 +32,4 @@ if (isset($_POST["button"])) {
     }
     //mysqli_close($conexion);
 }
-require 'login.php'; 
+//require 'login.php';
