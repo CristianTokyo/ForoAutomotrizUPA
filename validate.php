@@ -3,6 +3,8 @@ if (isset($_POST["button"])) {
     require_once("conexion.php");
     $email = $_POST['email'];
     $pass = $_POST['pass'];
+
+
     $sql = "SELECT pass,email from users WHERE email = '$email'";
     if ($result = mysqli_query($conexion, $sql)){
       $row   = mysqli_fetch_row($result);    }
@@ -17,7 +19,14 @@ if (isset($_POST["button"])) {
       echo "</script>";
     }
     else {
-     header("location:formulario.php "); // poner a vista de formulario
+      session_start();
+      if ($_SESSION['login']== True || ($pass  == $row[0] && $email == $row[1])){
+            $_SESSION['login'] = True;
+            $_SESSION['participante'] = $row[1];
+            $_SESSION['clave'] = $row[0];
+            header("location:formulario.php"); // poner a vista de formulario
+      }
+
     }
     //mysqli_close($conexion);
 }
