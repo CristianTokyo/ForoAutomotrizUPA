@@ -12,8 +12,8 @@ if ($_SESSION['participante'])
   $correo = $_SESSION['participante'];
   $nip = $_SESSION['clave'];
   $sql = "select idusr from users where email = '$correo'"; //falta un and al password
-  if ($result = mysqli_query($conexion, $sql)){
-    $row   = mysqli_fetch_row($result);    }
+  if ($result = mysqli_query($conexion, $sql))
+    $row   = mysqli_fetch_row($result);
 
   $numUsuario = $row[0];
 
@@ -22,17 +22,17 @@ if ($_SESSION['participante'])
   if ($result = mysqli_query($conexion, $sql)) {
     while ($rows   = $result->fetch_assoc())
       $eventosSuscrito[] = $rows; }
-
+      //vector con el listado de eventos suscritos
   foreach ($eventosSuscrito as $key => $value) {
     $testEvent = $eventosSuscrito[$key];
-    $listaEventos[] = $testEvent['idevent'];} //vector con el listado de eventos suscritos
+    $listaEventos[] = $testEvent['idevent'];
+  }
 
     $_SESSION['tags'] = array(1=>0,2=>0, 3=>0, 4=>0,5=>0,6=>0,7=>0,8=>0,9=>0,10=>0,11=>0,12=>0,
                               13=>0, 14=>0,15=>0,16=>0,17=>0); //Lista de eventos en session
   //si ya tiene eventos seleccionados se omiten
-  foreach ($listaEventos as $key => $value) {
+  foreach ($listaEventos as $key => $value)
       $_SESSION['tags'][$listaEventos[$key]] = 1;
-    }
 
 
   if(!empty($_POST)){
@@ -41,45 +41,30 @@ if ($_SESSION['participante'])
       $eventos  =  array();
       //si el cupo esta lleno  el evento se omite
 
-      //Obtiene los eventos seleccionados
-      foreach ($postArreglo as $postNombre) {
-        if (array_key_exists($postNombre, $_POST))
-          $eventos[] = $_POST[$postNombre];
-      }
-
     //Obtiene los eventos seleccionados
     foreach ($postArreglo as $postNombre) {
-      if (array_key_exists($postNombre, $_POST)){
-        $eventos[] = $_POST[$postNombre];
-      }
-    }
-    //Obtiene el idusr de la base de datos de la persona logeada
-    $correo = $_SESSION['participante'];
-    $nip = $_SESSION['clave'];
-    $sql = "select idusr from users where email = '$correo'"; //falta un and al password
-    if ($result = mysqli_query($conexion, $sql)){
-      $row   = mysqli_fetch_row($result);    }
+      if (array_key_exists($postNombre, $_POST))
+        $eventos[] = $_POST[$postNombre];}
 
     //Inscribe al participante en las actividades
     foreach ($eventos as $key => $value) {
-
       $sql = "insert into `events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, '$row[0]','$value')";
       $result = mysqli_query($conexion, $sql);
     }
-  }
-  $destinatario = "luis.ernesto.anaya@upa.edu.mx";
-  $adunto  = "Talleres ";
-  $cuerpo = '';
-  foreach ($eventos as $key => $value) {
-     $resultado = mysqli_query($conexion, "SELECT ename  FROM events WHERE idevent = $value");
-     while ($consulta = mysqli_fetch_array($resultado)) {
-       $cuerpo.= $consulta['ename']."<br> n";
-     }
 
+
+      $destinatario = "luis.ernesto.anaya@upa.edu.mx";
+      $adunto  = "Talleres ";
+      $cuerpo = '';
+      foreach ($eventos as $key => $value) {
+         $resultado = mysqli_query($conexion, "SELECT ename  FROM events WHERE idevent = $value");
+         while ($consulta = mysqli_fetch_array($resultado))
+           $cuerpo.= $consulta['ename']."<br> n";
+      }
+      // mail($destinatario,$asunto,$cuerpo); se manda los correos
+    }
   }
-  // mail($destinatario,$asunto,$cuerpo); se manda los correos
 }
-
 require 'formularioP.php';
 
 //insert into `events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, 1,1);
