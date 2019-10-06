@@ -96,76 +96,7 @@
     <div class = "container">
       <?php if(isset($_POST['nov26'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
-<<<<<<< HEAD
-        <table class="table table-striped">
-          <tr>
-            <th> Horario </th>
-            <th> Tipo de Actividad</th>
-            <th> Actividad </th>
-            <th> Expositor </th>
-            <th> Asistire </th>
-          </tr>
-          <tr>
-            <td>10:00 -11:00 </td>
-            <td>Conferencia magistral</td>
-            <td>Tendencias de la industria Automotriz</td>
-            <td>Ing. Armando Ávila Moreno</td>
-            <td> <input type="checkbox" name="1" id="1" value="1"  > </td>
-          </tr>
-          <tr>
-             <td>11:00-12:30</td>
-             <td>Panel Magistral</td>
-             <td>Tendencias del sector automotriz y la pertinencia del sector educativo</td>
-             <td>Dr. Herminio Baltazar Cisneros</td>
-             <td><input type="checkbox" name="2" id="2" value="2"  ></td>
-          </tr>
-          <tr>
-            <td>12:30-13:00</td>
-            <td>Concurso</td>
-            <td>Modelado en solid works.Primera etapa</td>
-            <td></td>
-            <td><input type="checkbox" name="3" value="4" id="3"></td>
-          </tr>
-          <tr>
-            <td>13:00-15:00</td>
-            <td>Conferencia</td>
-            <td>Industria 4.0</td>
-            <td>Ina Helena Ringk Seterbakken</td>
-            <td><input <input type="checkbox" name="4"  id="4" value="5"  ></td>
-          </tr>
-          <tr>
-              <th rowspan ="2">13:15-14:15</th>
-              <td>Conferencia</td>
-              <td>Nuevo Lenguaje de comunicación de la calidad en las empresas</td>
-              <td>Ing. Salvador Esparza del Pozo</td>
-              <td><input type="radio" name="5" value="6" id="5"></td>
-          </tr>
-          <tr>
-              <td>Conferencia</td>
-              <td>El impacto y desarrolo de la manufactura automotriz</td>
-              <td>Ing. Sergio Luna Flores</td>
-              <td><input type="radio" name="5" value="7" id="5"></td>
-          </tr>
-          <tr>
-            <th rowspan="2">16:15-18:00</th>
-            <td>Taller</td>
-            <td>Lean Manufacturing. Identificación y solución de problemas en una cadena de valor</td>
-            <td>Dr. Julio Alberto Márquez Landa</td>
-            <td><input type="radio" name="6" value="8" id="6"></td>
-          </tr>
-              <td>Taller</td>
-              <td>Diseño de componentes automotrices</td>
-              <td>MC. Juan Carlos Collazo Barrientos</td>
-              <td><input type="radio" name="6" value="9" id="6"></td>
-          </tr>
-          <tr>
-            <td>12:00-19:00</td>
-            <td>ExpoProyectos</td>
-            <td>Inscribirme para participar con mi proyecto</td>
-            <td></td>
-            <td><input <input type="checkbox" name="7" id="7" value="10"></td>
-          </tr>
-=======
+
         <h1> 26 de Noviembre de 2019</h1>
         <table  class="table table-bordered table-responsive table-hover">
           <thead class = "thead-dark">
@@ -240,88 +171,14 @@
               <td><input <input type="checkbox" name="7" id="" value="9"></td>
             </tr>
         </tbody>
->>>>>>> 17ac4230d7806f2125f372c3581eafa37078ada8
+
         </table>
         <button    name="guardar" value="Guardar""   >Guardar </button>
         </form>
         <?php endif;   ?>
 
       <?php if(isset($_POST['nov27'])):   ?>
-<<<<<<< HEAD
-        <form action="formulario.php" method="POST"  class="bg-light p-5 contact-form">
-        <table  class="table table-striped">
-          <tr>
-            <th> Horario </th>
-            <th> Tipo de Actividad</th>
-            <th> Actividad </th>
-            <th> Expositor </th>
-            <th> Asistire </th>
-          </tr>
-          <tr>
-            <td>09:00-11:00 </td>
-            <td>Conferencia Magistral</td>
-            <td>El desafío de la excelencia en la cadena de suministro</td>
-            <td>Frank Nalepa</td>
-            <td><input type="checkbox" name="1" id="1" value="11" disabled  ></td>
-          </tr>
-          <tr>
-             <th rowspan="2">11:00-12:30</th>
-             <td>Panel</td>
-             <td>Jóvenes emprendedores en la proveeduria automotriz de autopartes</td>
-             <td>Ing. Abraham Eduardo Pinedo Martínez</td>
-             <td><input type="radio" name="2" value="12" id="12"></td>
-          </tr>
-          <tr>
-             <td>Conferencia</td>
-             <td>Importancia del factor humano  en  el sector automotriz</td>
-             <td>Ma. de Lourdes Quijas Jiménez</td>
-             <td><input type="radio" name="2" value="13" id="13"></td>
 
-            <td>
-                Supplier development fot the OEM
-                <input type="radio" name="2" id="4" value="11"  >
-            </td>
-            <td></td>
-
-          </tr>
-          <tr>
-            <th rowspan="2">12:45-14:30</th>
-            <td>Conferencia</td>
-            <td>Desarrollo de la PYMES para la proveeduria automotriz</td>
-            <td>Ing. Armando Gómez de la Torre</td>
-            <td><input type="radio" name="5" value="14" id="5"></td>
-          </tr>
-          <tr>
-            <td>Conferencia</td>
-            <td>Innovacion y creatividad</td>
-            <td>MDA. Juan Camilo Mesa Jaramillo</td>
-            <td><input type="radio" name="5" value="15" id="6"></td>
-          </tr>
-          <tr>
-            <td>16:00-19:00</td>
-            <td>Concurso</td>
-            <td>Moldelado en Solid Works</td>
-            <td></td>
-            <td><input <input type="checkbox" name="7" value="16" id="7"   ></td>
-          </tr>
-          <tr>
-              <th rowspan="2">16:00-18:30</th>
-              <td>Taller</td>
-              <td>Logística</td>
-              <td>Álvaro Dávila</td>
-              <td><input type="radio" name="8" value="17" id="8"></td>
-          </tr>
-          <tr>
-              <td>Conferencia</td>
-              <td>Es tiempo de crear</td>
-              <td>Ing. Cuitláhuac Pérez Cerros</td>
-              <td><input type="radio" name="8" value="18" id="9"></td>
-          </tr>
-        </table>
-  
-        <input type="submit" class="btn btn-primary"  name="guardar27" value="Guardar">
-
-=======
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
           <h1> 27 de Noviembre de 2019</h1>
         <table  class="table table-bordered table-responsive table-hover">
