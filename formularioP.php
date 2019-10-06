@@ -248,7 +248,6 @@
           <tbody>
         </table>
         <input type="submit"  name="guardar" value="Guardar" class="btn btn-primary">
->>>>>>> 17ac4230d7806f2125f372c3581eafa37078ada8
         </form>
         <?php endif;   ?>
     </div>

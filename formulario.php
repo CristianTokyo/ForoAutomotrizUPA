@@ -16,9 +16,6 @@ if(!empty($_POST)){
         $eventos[] = $_POST[$postNombre];
       }
     }
-
-    
-
     //Obtiene el idusr de la base de datos de la persona logeada
     $correo = $_SESSION['participante'];
     $nip = $_SESSION['clave'];
@@ -28,10 +25,22 @@ if(!empty($_POST)){
 
     //Inscribe al participante en las actividades
     foreach ($eventos as $key => $value) {
+     
       $sql = "insert into `events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, '$row[0]','$value')";
       $result = mysqli_query($conexion, $sql);
     }
   }
+  $destinatario = "luis.ernesto.anaya@upa.edu.mx";
+  $adunto  = "Talleres ";
+  $cuerpo = ''; 
+  foreach ($eventos as $key => $value) {
+     $resultado = mysqli_query($conexion, "SELECT ename  FROM events WHERE idevent = $value");
+     while ($consulta = mysqli_fetch_array($resultado)) {
+       $cuerpo.= $consulta['ename'].'<br>';
+     }
+
+  } 
+  // mail($destinatario,$asunto,$cuerpo); se manda los correos 
 }
 
 require 'formularioP.php';
