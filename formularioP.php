@@ -75,6 +75,7 @@
       <div class = "heading mb-5 pt-5 pl-md-5">
         <h2>Selección de actividades por día</h2>
         <h3>La disponibilidad de las actividades está sujeta al cupo de las mismas.</h3>
+        <h3>Una vez guardadas las actividades no se podrá hacer cambios.</h3>
       </div>
       <div class="row">
         <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
@@ -113,28 +114,28 @@
               <td>Conferencia magistral</td>
               <td>Tendencias de la industria Automotriz</td>
               <td>Ing. Armando Ávila Moreno</td>
-              <td> <input type="checkbox" name="1" id="" value="1"  > </td>
+              <td> <input type="checkbox" name="tag_1" id="" value="1" > </td>
             </tr>
             <tr>
                <th>11:00-12:30</th>
                <td>Panel Magistral</td>
                <td>Tendencias del sector automotriz y la pertinencia del sector educativo</td>
                <td>Dr. Herminio Baltazar Cisneros</td>
-               <td><input type="checkbox" name="2" id="" value="2"  ></td>
+               <td><input type="checkbox" name="tag_2" id="" value="2"  ></td>
             </tr>
             <tr>
               <th>12:30-13:00</th>
               <td>Concurso</td>
               <td>Modelado en solid works.Primera etapa</td>
               <td></td>
-              <td><input type="checkbox" name="3" value="3" id=""></td>
+              <td><input type="checkbox" name="tag_3" value="3" id=""></td>
             </tr>
             <tr>
               <th>13:00-15:00</th>
               <td>Conferencia</td>
               <td>Industria 4.0</td>
               <td>Ina Helena Ringk Seterbakken</td>
-              <td><input <input type="checkbox" name="4" value="4" id=""></td>
+              <td><input <input type="checkbox" name="tag_4" value="4" id=""></td>
             </tr>
             <tr>
                 <th rowspan ="2">13:15-14:15</th>
@@ -144,8 +145,8 @@
                 <br><br><br>El impacto y desarrolo de la manufactura automotriz</td>
                 <td rowspan="2">Ing. Salvador Esparza del Pozo
                 <br><br>Ing. Sergio Luna Flores</td>
-                <th rowspan="2"><input type="radio" name="5" value="5" id="">
-                <br><br><br><input type="radio" name="5" value="6" id=""></th>
+                <th rowspan="2"><input type="radio" name="tag_5" value="5" id="">
+                <br><br><br><input type="radio" name="tag_5" value="6" id=""></th>
             </tr>
             <tr>
             </tr>
@@ -157,8 +158,8 @@
               <br><br>Diseño de componentes automotrices</td>
               <td rowspan="2">Dr. Julio Alberto Márquez Landa
               <br><br>MC. Juan Carlos Collazo Barrientos</td>
-              <td rowspan="2"><input type="radio" name="6" value="7" id="">
-              <br><br><br><input type="radio" name="6" value="8" id=""></td>
+              <td rowspan="2"><input type="radio" name="tag_6" value="7" id="">
+              <br><br><br><input type="radio" name="tag_6" value="8" id=""></td>
             </tr>
             <tr>
             </tr>
@@ -167,11 +168,12 @@
               <td>ExpoProyectos</td>
               <td>Inscribirme para participar con mi proyecto</td>
               <td></td>
-              <td><input <input type="checkbox" name="7" id="" value="9"></td>
+              <td><input <input type="checkbox" name="tag_7" id="" value="9"></td>
             </tr>
         </tbody>
         </table>
         <input type="submit"  name="guardar" value="Guardar"class="btn btn-primary">
+        <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
         </form>
         <?php endif;   ?>
 
@@ -194,7 +196,7 @@
               <td>Conferencia Magistral</td>
               <td>El desafío de la excelencia en la cadena de suministro</td>
               <td>Frank Nalepa</td>
-              <td><input type="checkbox" name="8" id="" value="10"  ></td>
+              <td><input type="checkbox" name="tag_8" id="" value="10"  ></td>
             </tr>
             <tr>
                <th rowspan="2">11:00-12:30</th>
@@ -204,8 +206,8 @@
                <br><br>Importancia del factor humano  en  el sector automotriz</td>
                <td rowspan="2">Ing. Abraham Eduardo Pinedo Martínez
                <br><br>Ma. de Lourdes Quijas Jiménez</td>
-               <td rowspan="2"><input type="radio" name="9" value="11" id="">
-                 <br><br><br><input type="radio" name="9" value="12" id=""></td>
+               <td rowspan="2"><input type="radio" name="tag_9" value="11" id="">
+                 <br><br><br><input type="radio" name="tag_9" value="12" id=""></td>
             </tr>
             <tr>
             </tr>
@@ -217,8 +219,8 @@
               <br><br>Innovacion y creatividad</td>
               <td rowspan="2">Ing. Armando Gómez de la Torre
               <br><br>MDA. Juan Camilo Mesa Jaramillo</td>
-              <td rowspan="2"><input type="radio" name="10" value="13" id="">
-              <br><br><input type="radio" name="10" value="14" id=""></td>
+              <td rowspan="2"><input type="radio" name="tag_10" value="13" id="">
+              <br><br><input type="radio" name="tag_10" value="14" id=""></td>
             </tr>
             <tr>
             </tr>
@@ -227,7 +229,7 @@
               <td>Concurso</td>
               <td>Moldelado en Solid Works</td>
               <td></td>
-              <td><input <input type="checkbox" name="11" value="15" id="" value=""  ></td>
+              <td><input <input type="checkbox" name="tag_11" value="15" id="" value=""  ></td>
             </tr>
             <tr>
                 <th rowspan="2">16:00-18:30</th>
@@ -237,14 +239,15 @@
                 <br><br>Es tiempo de crear</td>
                 <td rowspan="2">Álvaro Dávila
                 <br><br>Ing. Cuitláhuac Pérez Cerros</td>
-                <td rowspan="2"><input type="radio" name="12" value="16" id="">
-                <br><br><br><input type="radio" name="12" value="17" id=""></td>
+                <td rowspan="2"><input type="radio" name="tag_12" value="16" id="">
+                <br><br><br><input type="radio" name="tag_12" value="17" id=""></td>
             </tr>
             <tr>
             </tr>
           <tbody>
         </table>
         <input type="submit"  name="guardar" value="Guardar" class="btn btn-primary">
+          <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
         </form>
         <?php endif;   ?>
     </div>
