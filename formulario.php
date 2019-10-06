@@ -36,7 +36,7 @@ if(!empty($_POST)){
   foreach ($eventos as $key => $value) {
      $resultado = mysqli_query($conexion, "SELECT ename  FROM events WHERE idevent = $value");
      while ($consulta = mysqli_fetch_array($resultado)) {
-       $cuerpo.= $consulta['ename'].'<br>';
+       $cuerpo.= $consulta['ename']."<br> n";
      }
 
   } 
