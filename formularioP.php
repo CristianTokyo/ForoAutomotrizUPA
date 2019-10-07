@@ -97,7 +97,6 @@
     <div class = "container">
       <?php if(isset($_POST['nov26'])):   ?>
         <form action="<?php   echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
-
         <h1> 26 de Noviembre de 2019</h1>
         <table  class="table table-bordered table-responsive table-hover">
           <thead class = "thead-dark">
@@ -116,7 +115,6 @@
               <td>Tendencias de la industria Automotriz</td>
               <td>Ing. Armando Ávila Moreno</td>
               <td>
-                <input type="hidden" name="tag1_saved" value="0" />
                 <input type="checkbox" name="tag_1" id="" value="1"
                 <?php if($_SESSION['tags'][1] === 1) echo 'checked disabled';?>></td>
             </tr>
@@ -256,11 +254,10 @@
             <tr>
               <th>16:00-19:00</th>
               <td>Concurso</td>
-              <td>Moldelado en Solid Works</td>
+              <td>Moldelado en Solid Works. Final (debe inscribirse en el día 26)</td>
               <td></td>
-              <td><input <input type="checkbox" name="tag_11" value="15" id="" value=""
-                <?php if($_SESSION['tags'][15] === 1) echo 'checked disabled';?>
-                <?php if($_SESSION['tags'][3] === 1) echo 'disabled';?>></td>
+              <td><input <input type="checkbox" name="tag_11" value="15" id="" value="" disabled
+                <?php if($_SESSION['tags'][15] === 1) echo 'checked';?></td>
             </tr>
             <tr>
                 <th rowspan="2">16:00-18:30</th>

@@ -49,7 +49,6 @@ if ($_SESSION['participante'])
     if(isset($_POST['guardar'])) //Viene del formulario
     {
       $eventos  =  array();
-
     //Obtiene los eventos seleccionados
     foreach ($postArreglo as $postNombre) {
       if (array_key_exists($postNombre, $_POST))
@@ -57,7 +56,7 @@ if ($_SESSION['participante'])
 
     //Inscribe al participante en las actividades
     foreach ($eventos as $key => $value) {
-      $sql = "insert into `events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, '$row[0]','$value')";
+      $sql = "insert into `foroaut1_events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, '$row[0]','$value')";
       $result = mysqli_query($conexion, $sql);
       if ($result == 1)
         {
@@ -68,17 +67,65 @@ if ($_SESSION['participante'])
         }
     }
 
-      $destinatario = "luis.ernesto.anaya@upa.edu.mx";
+      $destinatario = "wicho.anaya@gmail.com";
       $asunto  = "Foro Automotriz AGS-UPA Eventos Inscrito";
-      $cuerpo = 'Estos son los eventos a los que ésta inscrito: ';
-      foreach ($eventos as $key => $value) {
-         $resultado = mysqli_query($conexion, "SELECT ename FROM events WHERE idevent = $value");
-         while ($consulta = mysqli_fetch_array($resultado))
-           $cuerpo.= $consulta['ename']."<br> n";
+      $cuerpo = "Estos son los eventos a los que ésta inscrito: "."\r\n";
+
+      $cuerpo = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+              "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+              <html xmlns="http://www.w3.org/1999/xhtml">
+              <head>
+              <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+              <meta name="viewport" content="width=device-width, initial-scale=1"/>
+              <title>Foro Automotriz</title>
+              <style type="text/css">
+              h1{color: ##0093CA;}
+              p{font-size: 1rem; }
+              img{
+                  width: 10rem;
+                  height: 10rem;}
+              </style>
+              </head>
+              <body>
+              <h1>Bienvenido al Foro Automotriz Ags-UPA</h1>
+              <p>Estos son las actividades a las que estás inscrito:<br></p>';
+
+      $encabezados = "MIME-Version: 1.0" . "\r\n";
+      $encabezados .= "Content-type:text/html; charset=UTF-8" . "\r\n";
+      $encabezados .= 'From: Foro Automotriz Ags-UPA<foroautomotriz@upa.edu.mx>' . "\r\n";
+
+      //Obtiene el horario completo del usuario
+      $sql = "SELECT ename, manager, day, beginhr, finishhr from users_events, events
+              WHERE users_events.idevent = events.idevent and users_events.idusr = '$numUsuario'";
+      if($resultado = mysqli_query($conexion, $sql))
+      while ($rows   = $resultado->fetch_assoc())
+        $horario[] = $rows;
+
+      $cuerpo .= '<table>
+      <thead>
+        <tr>
+          <th>Actividad</th>
+          <th>Expositor</th>
+          <th>Día</th>
+          <th>Hora Inicio</th>
+          <th>Hora Fin</th>
+        </tr>
+    </thead><tbody>';
+      foreach ($horario as $key => $value) {
+          $cuerpo .= "<tr><td>".$horario[$key]['ename']."</td>";
+          $cuerpo .= "<td>".$horario[$key]['manager']."</td>";
+          $cuerpo .= "<td>".$horario[$key]['day']." Nov </td>";
+          $cuerpo .= "<td>".$horario[$key]['beginhr']."</td>";
+          $cuerpo .= "<td>".$horario[$key]['finishhr']."</td></tr>";
       }
-      print_r($cuerpo);
-      mail($destinatario,$asunto,$cuerpo); //se manda los correos
-      mail($correo,$asunto,$cuerpo);
+
+      $cuerpo .= '</tbody></table>';
+      $cuerpo .= '<p>Te esperamos.</p>
+        <img src="images/logo_foroAutomotriz.png">
+        </body>';
+
+      $resultado = mail($destinatario,$asunto,$cuerpo,$encabezados); //se manda los correos
+      mail($correo,$asunto,$cuerpo,$encabezados);
     }
   }
 }
@@ -87,3 +134,5 @@ require 'formularioP.php';
 //insert into `events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, 1,1);
 //select idusr from users where email = "luis.ernesto.anaya@upa.edu.mx";
 //"<?php $_POST['$tag1_saved'] == 'True'? '':'checked';
+
+//SELECT ename, manager, day, beginhr, finishhr from users_events, events WHERE users_events.idevent = events.idevent and users_events.idusr = 1

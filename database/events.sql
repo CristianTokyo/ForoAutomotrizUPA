@@ -1,9 +1,3 @@
-
-DROP SCHEMA IF EXISTS `events`;
-
-CREATE SCHEMA IF NOT EXISTS `events` DEFAULT CHARACTER SET utf8 ;
-USE `events` ;
-
 -- -----------------------------------------------------
 -- USERS
 -- -----------------------------------------------------
