@@ -59,17 +59,26 @@ if ($_SESSION['participante'])
     foreach ($eventos as $key => $value) {
       $sql = "insert into `events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, '$row[0]','$value')";
       $result = mysqli_query($conexion, $sql);
+      if ($result == 1)
+        {
+          echo "<script>";
+          echo "alert('Datos guardados');";
+          echo "window.location = 'formulario.php';";
+          echo "</script>";
+        }
     }
 
       $destinatario = "luis.ernesto.anaya@upa.edu.mx";
-      $adunto  = "Talleres ";
-      $cuerpo = '';
+      $asunto  = "Foro Automotriz AGS-UPA Eventos Inscrito";
+      $cuerpo = 'Estos son los eventos a los que ésta inscrito: ';
       foreach ($eventos as $key => $value) {
-         $resultado = mysqli_query($conexion, "SELECT ename  FROM events WHERE idevent = $value");
+         $resultado = mysqli_query($conexion, "SELECT ename FROM events WHERE idevent = $value");
          while ($consulta = mysqli_fetch_array($resultado))
            $cuerpo.= $consulta['ename']."<br> n";
       }
-      // mail($destinatario,$asunto,$cuerpo); se manda los correos
+      print_r($cuerpo);
+      mail($destinatario,$asunto,$cuerpo); //se manda los correos
+      mail($correo,$asunto,$cuerpo);
     }
   }
 }
