@@ -20,26 +20,35 @@ if ($_SESSION['participante'])
   //eventos suscrito
   $sql = "select idevent from users_events where idusr = '$numUsuario' order by idevent";
   if ($result = mysqli_query($conexion, $sql)) {
-    while ($rows   = $result->fetch_assoc())
-      $eventosSuscrito[] = $rows; }
+    if (!mysqli_num_rows($result)){
+      $eventosSuscrito = array();
+      $listaEventos = array();}
+    else{
+      while ($rows   = $result->fetch_assoc())
+        $eventosSuscrito[] = $rows;
+
       //vector con el listado de eventos suscritos
-  foreach ($eventosSuscrito as $key => $value) {
-    $testEvent = $eventosSuscrito[$key];
-    $listaEventos[] = $testEvent['idevent'];
+      foreach ($eventosSuscrito as $key => $value) {
+        $testEvent = $eventosSuscrito[$key];
+        $listaEventos[] = $testEvent['idevent'];
+      }
+    }
   }
 
-    $_SESSION['tags'] = array(1=>0,2=>0, 3=>0, 4=>0,5=>0,6=>0,7=>0,8=>0,9=>0,10=>0,11=>0,12=>0,
-                              13=>0, 14=>0,15=>0,16=>0,17=>0); //Lista de eventos en session
+  //Lista de eventos en session
+  $_SESSION['tags'] = array(1=>0,2=>0, 3=>0, 4=>0,5=>0,6=>0,7=>0,8=>0,9=>0,10=>0,11=>0,12=>0,
+                              13=>0, 14=>0,15=>0,16=>0,17=>0);
+
   //si ya tiene eventos seleccionados se omiten
   foreach ($listaEventos as $key => $value)
       $_SESSION['tags'][$listaEventos[$key]] = 1;
 
+  //si el cupo esta lleno  el evento se omite
 
   if(!empty($_POST)){
     if(isset($_POST['guardar'])) //Viene del formulario
     {
       $eventos  =  array();
-      //si el cupo esta lleno  el evento se omite
 
     //Obtiene los eventos seleccionados
     foreach ($postArreglo as $postNombre) {
@@ -51,7 +60,6 @@ if ($_SESSION['participante'])
       $sql = "insert into `events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, '$row[0]','$value')";
       $result = mysqli_query($conexion, $sql);
     }
-
 
       $destinatario = "luis.ernesto.anaya@upa.edu.mx";
       $adunto  = "Talleres ";
