@@ -58,41 +58,30 @@ if ($_SESSION['participante'])
     foreach ($eventos as $key => $value) {
       $sql = "insert into `foroaut1_events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, '$row[0]','$value')";
       $result = mysqli_query($conexion, $sql);
-      if ($result == 1)
-        {
-          echo "<script>";
-          echo "alert('Datos guardados');";
-          echo "window.location = 'formulario.php';";
-          echo "</script>";
-        }
     }
 
       $destinatario = "wicho.anaya@gmail.com";
-      $asunto  = "Foro Automotriz AGS-UPA Eventos Inscrito";
-      $cuerpo = "Estos son los eventos a los que ésta inscrito: "."\r\n";
-
-      $cuerpo = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-              "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-              <html xmlns="http://www.w3.org/1999/xhtml">
-              <head>
-              <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-              <meta name="viewport" content="width=device-width, initial-scale=1"/>
-              <title>Foro Automotriz</title>
-              <style type="text/css">
-              h1{color: ##0093CA;}
-              p{font-size: 1rem; }
-              img{
-                  width: 10rem;
-                  height: 10rem;}
-              </style>
+      $asunto  = "Eventos del Foro Automotriz";
+      $cuerpo = '<html>
+                <head>
+                <title>Foro Automotriz</title>
+                <style type="text/css">
+                h1{color: ##0093CA;}
+                p{font-size: 1rem; }
+                img{
+                    width: 10rem;
+                    height: 10rem;}
+                </style>
               </head>
               <body>
-              <h1>Bienvenido al Foro Automotriz Ags-UPA</h1>
-              <p>Estos son las actividades a las que estás inscrito:<br></p>';
+                <h1>Bienvenido al Foro Internacional de la </h1><br>
+                <h1>Industria Automotriz Ags-UPA</h1>
+                <p>Estos son las actividades a las que estás inscrito:<br></p>';
 
       $encabezados = "MIME-Version: 1.0" . "\r\n";
       $encabezados .= "Content-type:text/html; charset=UTF-8" . "\r\n";
-      $encabezados .= 'From: Foro Automotriz Ags-UPA<foroautomotriz@upa.edu.mx>' . "\r\n";
+      $encabezados .= "From:registro@foroautomotrizags-upa.com" . "\r\n";
+      $encabezados .= "Bcc:registro@foroautomotrizags-upa.com" . "\r\n";
 
       //Obtiene el horario completo del usuario
       $sql = "SELECT ename, manager, day, beginhr, finishhr from users_events, events
@@ -121,11 +110,17 @@ if ($_SESSION['participante'])
 
       $cuerpo .= '</tbody></table>';
       $cuerpo .= '<p>Te esperamos.</p>
-        <img src="images/logo_foroAutomotriz.png">
-        </body>';
+
+        </body></html>'."\r\n";
+
 
       $resultado = mail($destinatario,$asunto,$cuerpo,$encabezados); //se manda los correos
-      mail($correo,$asunto,$cuerpo,$encabezados);
+
+      if ($resultado){
+      echo "<script>";
+      echo "alert('Datos guardados, revise su correo');";
+      echo "window.location = 'formulario.php';";
+      echo "</script>";}
     }
   }
 }
