@@ -75,14 +75,14 @@ if ($_SESSION['participante'])
 
       //Obtiene el horario completo del usuario
       $sql = "SELECT ename, manager, day, beginhr, finishhr from users_events, events
-              WHERE users_events.idevent = events.idevent and users_events.idusr = '$numUsuario'";
+              WHERE users_events.idevent = events.idevent and users_events.idusr = '$numUsuario' order by events.idevent";
       if($resultado = mysqli_query($conexion, $sql))
       while ($rows   = $resultado->fetch_assoc())
         $horario[] = $rows;
 
-      $cuerpo .= '<table>
+      $cuerpo .= '<table border = "1">
           <thead>
-            <tr>
+            <tr style="text-align: center">
               <th>Actividad</th>
               <th>Expositor</th>
               <th>Día</th>
@@ -92,7 +92,7 @@ if ($_SESSION['participante'])
         </thead><tbody>';
 
       foreach ($horario as $key => $value) {
-          $cuerpo .= "<tr><td>".$horario[$key]['ename']."</td>";
+          $cuerpo .= '<tr style="text-align: center"><td>'.$horario[$key]['ename']."</td>";
           $cuerpo .= "<td>".$horario[$key]['manager']."</td>";
           $cuerpo .= "<td>".$horario[$key]['day']." Nov </td>";
           $cuerpo .= "<td>".$horario[$key]['beginhr']."</td>";
@@ -100,17 +100,16 @@ if ($_SESSION['participante'])
       }
 
       $cuerpo .= '</tbody></table>';
-      $cuerpo .= '<p>Te esperamos.</p>
-                  <img src = images/logo_foroAutomotriz_SinFecha.png>';
+      $cuerpo .= '<p>Te esperamos.</p>';
+      $cuerpo .= '<img src = "images/logo_foroAutomotriz.png"';
 
-      $destinatario = "wicho.anaya@gmail.com";
       $asunto  = "Eventos del Foro Automotriz";
 
       require("includes/class.phpmailer.php");
       $mail = new PHPMailer();
       $mail->From = "registro@foroautomotrizags-upa.com"; //Revisar direccion
       $mail->FromName = "Registro Foro Automotriz AGS-UPA";
-      $mail->AddAddress($destinatario);
+      $mail->AddAddress($correo);
       $mail->AddBCC("registro@foroautomotrizags-upa.com");
       $mail->WordWrap = 50;
       $mail->IsHTML(true);
