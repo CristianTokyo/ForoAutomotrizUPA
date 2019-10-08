@@ -2,6 +2,7 @@
 <?php
 require("conexion.php");
 require("validate.php");
+
 session_start(); //Obtiene los resultados de la sesión
 
 if ($_SESSION['participante'])
@@ -60,28 +61,17 @@ if ($_SESSION['participante'])
       $result = mysqli_query($conexion, $sql);
     }
 
-      $destinatario = "wicho.anaya@gmail.com";
-      $asunto  = "Eventos del Foro Automotriz";
-      $cuerpo = '<html>
-                <head>
-                <title>Foro Automotriz</title>
-                <style type="text/css">
+
+      $cuerpo = '<style type="text/css">
                 h1{color: ##0093CA;}
                 p{font-size: 1rem; }
                 img{
                     width: 10rem;
                     height: 10rem;}
                 </style>
-              </head>
-              <body>
-                <h1>Bienvenido al Foro Internacional de la </h1><br>
+                <h1>Bienvenido al Foro Internacional de la </h1>
                 <h1>Industria Automotriz Ags-UPA</h1>
                 <p>Estos son las actividades a las que estás inscrito:<br></p>';
-
-      $encabezados = "MIME-Version: 1.0" . "\r\n";
-      $encabezados .= "Content-type:text/html; charset=UTF-8" . "\r\n";
-      $encabezados .= "From:registro@foroautomotrizags-upa.com" . "\r\n";
-      $encabezados .= "Bcc:registro@foroautomotrizags-upa.com" . "\r\n";
 
       //Obtiene el horario completo del usuario
       $sql = "SELECT ename, manager, day, beginhr, finishhr from users_events, events
@@ -91,15 +81,16 @@ if ($_SESSION['participante'])
         $horario[] = $rows;
 
       $cuerpo .= '<table>
-      <thead>
-        <tr>
-          <th>Actividad</th>
-          <th>Expositor</th>
-          <th>Día</th>
-          <th>Hora Inicio</th>
-          <th>Hora Fin</th>
-        </tr>
-    </thead><tbody>';
+          <thead>
+            <tr>
+              <th>Actividad</th>
+              <th>Expositor</th>
+              <th>Día</th>
+              <th>Hora Inicio</th>
+              <th>Hora Fin</th>
+            </tr>
+        </thead><tbody>';
+
       foreach ($horario as $key => $value) {
           $cuerpo .= "<tr><td>".$horario[$key]['ename']."</td>";
           $cuerpo .= "<td>".$horario[$key]['manager']."</td>";
@@ -110,17 +101,38 @@ if ($_SESSION['participante'])
 
       $cuerpo .= '</tbody></table>';
       $cuerpo .= '<p>Te esperamos.</p>
+                  <img src = images/logo_foroAutomotriz_SinFecha.png>';
 
-        </body></html>'."\r\n";
+      $destinatario = "wicho.anaya@gmail.com";
+      $asunto  = "Eventos del Foro Automotriz";
+
+      require("includes/class.phpmailer.php");
+      $mail = new PHPMailer();
+      $mail->From = "registro@foroautomotrizags-upa.com"; //Revisar direccion
+      $mail->FromName = "Registro Foro Automotriz AGS-UPA";
+      $mail->AddAddress($destinatario);
+      $mail->AddBCC("registro@foroautomotrizags-upa.com");
+      $mail->WordWrap = 50;
+      $mail->IsHTML(true);
+      $mail->Subject = $asunto;
+      $mail->Body = $cuerpo;
+
+      //SMT Server
+      $mail->IsSMTP();
+      $mail->Host = 'mail.foroautomotrizags-upa.com';
+      $mail->Port = 2525;
+      $mail->SMTPAuth = true;
+      $mail->Username = 'registro@foroautomotrizags-upa.com';
+      $mail->Password = 'registro_upa';
 
 
-      $resultado = mail($destinatario,$asunto,$cuerpo,$encabezados); //se manda los correos
-
-      if ($resultado){
-      echo "<script>";
-      echo "alert('Datos guardados, revise su correo');";
-      echo "window.location = 'formulario.php';";
-      echo "</script>";}
+      if($mail->Send()){
+        echo "<script>";
+        echo "alert('Datos guardados, revise su correo');";
+        echo "window.location = 'formulario.php';";
+        echo "</script>";}
+      else
+        echo 'Mailer Error: '.$mail->ErrorInfo;
     }
   }
 }
