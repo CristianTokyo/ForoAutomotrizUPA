@@ -12,6 +12,7 @@ if ($_SESSION['participante'])
   //Obtiene el idusr de la base de datos de la persona logeada
   $correo = $_SESSION['participante'];
   $nip = $_SESSION['clave'];
+  $participante = $_SESSION['nombre'];
   $sql = "select idusr from users where email = '$correo'"; //falta un and al password
   if ($result = mysqli_query($conexion, $sql))
     $row   = mysqli_fetch_row($result);
@@ -95,7 +96,7 @@ if ($_SESSION['participante'])
             $horario[] = $rows;
 
 
-      if ($horario != NULL) //Si el usuario no está inscrito a nada no manda correo ni adjunta a la db
+      if ($horario != NULL && $eventos != NULL) //Si el usuario no está inscrito a nada no manda correo ni adjunta a la db
       {
 
         $cuerpo = '<style type="text/css">
@@ -104,9 +105,11 @@ if ($_SESSION['participante'])
                   img{
                       width: 10rem;
                       height: 10rem;}
-                  </style>
-                  <h1>Bienvenido al Foro Internacional de la </h1>
-                  <h1>Industria Automotriz Ags-UPA</h1>
+                  </style>';
+        $cuerpo .= "<h1>".$participante."</h1>";
+
+        $cuerpo .= '<h2>Bienvenido al Foro Internacional de la </h2>
+                  <h2>Industria Automotriz Ags-UPA</h2>
                   <p>Estos son las actividades a las que estás inscrito:<br></p>';
         $cuerpo .= '<table border = "1">
             <thead>
