@@ -80,7 +80,7 @@
       <div class="row">
         <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
           <div class="block-18 text-center py-4 mb-4">
-            <form action="<?php  // echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+            <form action="<?php  echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
             <input class="btn btn-primary" type="submit"   name="nov26"    value="Selecciona tus actividades">
             </form>
         </div>

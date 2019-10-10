@@ -159,7 +159,7 @@ if ($_SESSION['participante'])
         if($mail->Send()){
           echo "<script>";
           echo "alert('Datos guardados, revise su correo');";
-          echo "window.location = 'formulario.php';";
+          echo "window.location = 'index.html';";
           echo "</script>";}
         else
           echo 'Mailer Error: '.$mail->ErrorInfo;
