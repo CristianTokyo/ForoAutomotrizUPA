@@ -137,7 +137,7 @@ if ($_SESSION['participante'])
 
         $cuerpo .= '</tbody></table>';
         $cuerpo .= '<p>Te esperamos.</p>';
-        $cuerpo .= '<img src = "images/logo_foroAutomotriz.png"';
+        $cuerpo .= '<img src = "cid:logo">';
 
         $asunto  = "Eventos del Foro Automotriz";
 
@@ -151,8 +151,8 @@ if ($_SESSION['participante'])
         $mail->IsHTML(true);
         $mail->Subject = $asunto;
         $mail->Body = $cuerpo;
-        $mail->AddEmbeddedImage('images/logo_foroAutomotriz.png');
-        $mail->CharSet = 'UTF-8';  
+        $mail->AddEmbeddedImage('images/LogoForo.png', 'logo');
+        $mail->CharSet = 'UTF-8';
 
         //SMT Server
         $mail->IsSMTP();
