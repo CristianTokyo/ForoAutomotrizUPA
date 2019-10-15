@@ -62,8 +62,8 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start">
           <div class="col-md-9 ftco-animate pb-5">
-            <h1 class="mb-3 bread">Selección de actividades</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Inicio <i class="ion-ios-arrow-forward"></i></a></span> <span>Selección de actividades <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread">Generador de listas</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Inicio <i class="ion-ios-arrow-forward"></i></a></span> <span>Generador de listas <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
             <?php listadoParticipantes($participantes, $eventoSeleccionado); ?>
           </tbody>
       </table>
-      <input type="submit"  name="listado" value="Guardar"class="btn btn-primary" onclick= "test1();">
+      <input type="submit"  name="listado" value="Guardar"class="btn btn-primary">
       <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
       </form>
   </div>
@@ -197,5 +197,8 @@
   <script src="js/main.js"></script>
   <script src="js/formulario.js"></script>
   <?php require("validate.php");?>
+
+
+
   </body>
 </html>

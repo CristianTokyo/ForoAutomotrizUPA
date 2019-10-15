@@ -35,12 +35,6 @@ if ($_SESSION['nombre'] == 'administrador')
       $sql = "SELECT ename FROM events where idevent = '$idevento'";
       if ($result = mysqli_query($conexion, $sql))
           $eventoSeleccionado = mysqli_fetch_row($result);
-
-      echo "$eventoSeleccionado[0]";
-    }
-    if(isset($_POST['listado'])) //Viene del formulario gusrda la lista
-    {
-
     }
   }
 }
@@ -49,7 +43,7 @@ require('listadosP.php');
 //Genera el listado de participantes en el evento
 function listadoParticipantes($participantes, $eventoSeleccionado){
   echo "<h2> Evento '". $eventoSeleccionado[0]."'</h2>";
-  echo "<table  class='table table-bordered table-responsive table-hover'>";
+  echo "<table  class='table table-bordered table-responsive table-hover' id = 'tablaListas'>";
   echo "<thead class = 'thead-dark'>";
   echo "<tr style='text-align: center'>";
   echo "<th> # </th>";
