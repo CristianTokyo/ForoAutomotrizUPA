@@ -112,7 +112,7 @@ if ($_SESSION['participante'])
                       width: 10rem;
                       height: 10rem;}
                   </style></head>';
-        $cuerpo .= "<h1>".$participante."</h1>";
+        $cuerpo .= "<h2>".$participante."</h2>";
 
         $cuerpo .= '<h2>Bienvenido al Foro Internacional de la Industria Automotriz Ags-UPA</h2>
                   <p>Estos son las actividades a las que estás inscrito:<br></p>';
