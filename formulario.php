@@ -99,20 +99,8 @@ if ($_SESSION['participante'])
       if ($horario != NULL && $eventos != NULL) //Si el usuario no está inscrito a nada no manda correo ni adjunta a la db
       {
 
-        $cuerpo = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-                  <html xmlns="http://www.w3.org/1999/xhtml">
-                  <head>
-                  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-                  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                  <style type="text/css">
-                  h1{color: ##0093CA;}
-                  p{font-size: 1rem; }
-                  img{
-                      width: 10rem;
-                      height: 10rem;}
-                  </style></head>';
-        $cuerpo .= "<h2>".$participante."</h2>";
+
+        $cuerpo = '<h2>'.$participante.'</h2>';
 
         $cuerpo .= '<h2>Bienvenido al Foro Internacional de la Industria Automotriz Ags-UPA</h2>
                   <p>Estos son las actividades a las que estás inscrito:<br></p>';
