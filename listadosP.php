@@ -79,7 +79,7 @@
       <div class="row">
         <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
           <div class="block-18 text-center py-4 mb-4">
-            <form action="listados.php" method="post">
+            <form method="POST">
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="inputGroupSelect01">Eventos</label>
@@ -87,7 +87,6 @@
 
                 <?php if($_SESSION['nombre'] == 'administrador'): ?>
                 <select class="custom-select" id="inputGroupSelect01" name = "idevento">
-                  <option selected>Choose...</option>
                   <?php listadoEventos($eventos);?>
                 </select>
                 <?php endif;   ?>
@@ -99,9 +98,9 @@
   </div>
     <?php if(isset($_POST['listas'])):   ?>
   <div class = "container">
-      <form action="listados.php" method="POST"  class="bg-light p-5 contact-form">
-
-            <?php listadoParticipantes($participantes, $eventoSeleccionado); ?>
+      <form method="POST"  class="bg-light p-5 contact-form">
+            <?php listadoParticipantes($participantes, $eventoSeleccionado); 
+            ?>
           </tbody>
       </table>
       <input type="submit"  name="listado" value="Guardar"class="btn btn-primary">
