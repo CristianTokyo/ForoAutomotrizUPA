@@ -99,7 +99,7 @@
     <?php if(isset($_POST['listas'])):   ?>
   <div class = "container">
       <form method="POST"  class="bg-light p-5 contact-form">
-            <?php listadoParticipantes($participantes, $eventoSeleccionado); 
+            <?php listadoParticipantes($participantes, $eventoSeleccionado);
             ?>
           </tbody>
       </table>
@@ -155,7 +155,7 @@
                 <ul>
 
                   <li><span class="icon icon-map-marker"></span><span class="text">Desarrollo Especial Talleres F.F.C.C., 20270 Aguascalientes, Ags.</span></li>
-                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">4421400</span></a></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">449 333 11 00</span></a></li>
                   <li><a href="#"><span class="icon icon-envelope"></span><span class="text">foroautomotriz@upa.edu.mx</span></a></li>
 
                 </ul>

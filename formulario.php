@@ -13,7 +13,7 @@ if ($_SESSION['participante'])
   $correo = $_SESSION['participante'];
   $nip = $_SESSION['clave'];
   $participante = $_SESSION['nombre'];
-  $sql = "select idusr from users where email = '$correo' and pass = '$nip'"; //falta un and al password
+  $sql = "select idusr from users where email = '$correo' and pass = '$nip'"; 
   if ($result = mysqli_query($conexion, $sql))
     $row   = mysqli_fetch_row($result);
 
