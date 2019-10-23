@@ -162,19 +162,28 @@
             <tr>
             </tr>
             <tr>
-              <th rowspan="2">16:15-18:00</th>
-              <td rowspan="2">Taller
-              <br><br><br>Taller</td>
-              <td rowspan="2">Lean Manufacturing. Identificación y solución de problemas en una cadena de valor
-              <br><br>Diseño de componentes automotrices</td>
-              <td rowspan="2">Dr. Julio Alberto Márquez Landa
-              <br><br>MC. Juan Carlos Collazo Barrientos</td>
-              <td rowspan="2"><input type="radio" name="tag_6" value="7" id=""
+              <th rowspan="3">16:15-18:00</th>
+              <td rowspan="3">Taller
+              <br><br><br>Taller<br><br>Conferencia</td>
+              <td rowspan="3">Lean Manufacturing. Identificación y solución de problemas en una cadena de valor
+              <br><br>Diseño de componentes automotrices<br><br>Oportunidades y retos de la industria de las TI en México y en el mundo</td>
+              <td rowspan="3">Dr. Julio Alberto Márquez Landa
+              <br><br>MC. Juan Carlos Collazo Barrientos<br><br>Ing. Guillermo Ortega</td>
+              <td rowspan="3"><input type="radio" name="tag_6" value="7" id=""
                 <?php if($_SESSION['tags'][7] === 1) echo 'checked disabled';?>
-                <?php if($_SESSION['tags'][8] === 1) echo 'disabled';?>>
+                <?php if($_SESSION['tags'][8] === 1) echo 'disabled';?>
+                <?php if($_SESSION['tags'][9] === 1) echo 'disabled';?>>
               <br><br><br><input type="radio" name="tag_6" value="8" id=""
               <?php if($_SESSION['tags'][8] === 1) echo 'checked disabled';?>
-              <?php if($_SESSION['tags'][7] === 1) echo 'disabled';?>></td>
+              <?php if($_SESSION['tags'][7] === 1) echo 'disabled';?>
+              <?php if($_SESSION['tags'][9] === 1) echo 'disabled';?>>
+              <br><br><br><input type="radio" name="tag_6" value="9" id=""
+              <?php if($_SESSION['tags'][9] === 1) echo 'checked disabled';?>
+              <?php if($_SESSION['tags'][7] === 1) echo 'disabled';?>
+            <?php if($_SESSION['tags'][8] === 1) echo 'disabled';?>></td>
+
+            </tr>
+            <tr>
             </tr>
             <tr>
             </tr>
@@ -183,8 +192,8 @@
               <td>ExpoProyectos</td>
               <td>Inscribirme para participar con mi proyecto</td>
               <td></td>
-              <td><input <input type="checkbox" name="tag_7" id="" value="9"
-                <?php if($_SESSION['tags'][9] === 1) echo 'checked disabled';?>></td>
+              <td><input <input type="checkbox" name="tag_7" id="" value="10"
+                <?php if($_SESSION['tags'][10] === 1) echo 'checked disabled';?>></td>
             </tr>
         </tbody>
         </table>
@@ -205,8 +214,8 @@
             <td>Conferencia Magistral</td>
             <td>El desafío de la excelencia en la cadena de suministro</td>
             <td>Frank Nalepa</td>
-            <td><input type="checkbox" name="tag_8" id="" value="10"
-              <?php if($_SESSION['tags'][10] === 1) echo 'checked disabled';?>></td>
+            <td><input type="checkbox" name="tag_8" id="" value="11"
+              <?php if($_SESSION['tags'][11] === 1) echo 'checked disabled';?>></td>
           </tr>
           <tr>
              <th rowspan="2">11:00-12:30</th>
@@ -216,12 +225,12 @@
              <br><br>Importancia del factor humano  en  el sector automotriz</td>
              <td rowspan="2">Ing. Abraham Eduardo Pinedo Martínez
              <br><br>Ma. de Lourdes Quijas Jiménez</td>
-             <td rowspan="2"><input type="radio" name="tag_9" value="11" id=""
-               <?php if($_SESSION['tags'][11] === 1) echo 'checked disabled';?>
-               <?php if($_SESSION['tags'][12] === 1) echo 'disabled';?>>
-               <br><br><br><input type="radio" name="tag_9" value="12" id=""
+             <td rowspan="2"><input type="radio" name="tag_9" value="12" id=""
                <?php if($_SESSION['tags'][12] === 1) echo 'checked disabled';?>
-               <?php if($_SESSION['tags'][11] === 1) echo 'disabled';?>></td>
+               <?php if($_SESSION['tags'][13] === 1) echo 'disabled';?>>
+               <br><br><br><input type="radio" name="tag_9" value="13" id=""
+               <?php if($_SESSION['tags'][13] === 1) echo 'checked disabled';?>
+               <?php if($_SESSION['tags'][12] === 1) echo 'disabled';?>></td>
           </tr>
           <tr>
           </tr>
@@ -233,12 +242,12 @@
             <br><br>Innovacion y creatividad</td>
             <td rowspan="2">Ing. Armando Gómez de la Torre
             <br><br>MDA. Juan Camilo Mesa Jaramillo</td>
-            <td rowspan="2"><input type="radio" name="tag_10" value="13" id=""
-              <?php if($_SESSION['tags'][13] === 1) echo 'checked disabled';?>
-              <?php if($_SESSION['tags'][14] === 1) echo 'disabled';?>>
-            <br><br><input type="radio" name="tag_10" value="14" id=""
-            <?php if($_SESSION['tags'][14] === 1) echo 'checked disabled';?>
-            <?php if($_SESSION['tags'][13] === 1) echo 'disabled';?>></td>
+            <td rowspan="2"><input type="radio" name="tag_10" value="14" id=""
+              <?php if($_SESSION['tags'][14] === 1) echo 'checked disabled';?>
+              <?php if($_SESSION['tags'][15] === 1) echo 'disabled';?>>
+            <br><br><input type="radio" name="tag_10" value="15" id=""
+            <?php if($_SESSION['tags'][15] === 1) echo 'checked disabled';?>
+            <?php if($_SESSION['tags'][14] === 1) echo 'disabled';?>></td>
           </tr>
           <tr>
           </tr>
@@ -247,8 +256,8 @@
             <td>Concurso</td>
             <td>Moldelado en Solid Works. Final (debe inscribirse en el día 26)</td>
             <td></td>
-            <td><input <input type="checkbox" name="tag_11" value="15" id="" value="" disabled
-              <?php if($_SESSION['tags'][15] === 1) echo 'checked';?></td>
+            <td><input <input type="checkbox" name="tag_11" value="16" id="" value="" disabled
+              <?php if($_SESSION['tags'][16] === 1) echo 'checked';?></td>
           </tr>
           <tr>
               <th rowspan="2">16:00-18:30</th>
@@ -258,12 +267,12 @@
               <br><br>Es tiempo de crear</td>
               <td rowspan="2">Álvaro Dávila
               <br><br>Ing. Cuitláhuac Pérez Cerros</td>
-              <td rowspan="2"><input type="radio" name="tag_12" value="16" id=""
-                <?php if($_SESSION['tags'][16] === 1) echo 'checked disabled';?>
-                <?php if($_SESSION['tags'][17] === 1) echo 'disabled';?>>
-              <br><br><br><input type="radio" name="tag_12" value="17" id=""
-              <?php if($_SESSION['tags'][17] === 1) echo 'checked disabled';?>
-              <?php if($_SESSION['tags'][16] === 1) echo 'disabled';?>></td>
+              <td rowspan="2"><input type="radio" name="tag_12" value="17" id=""
+                <?php if($_SESSION['tags'][17] === 1) echo 'checked disabled';?>
+                <?php if($_SESSION['tags'][18] === 1) echo 'disabled';?>>
+              <br><br><br><input type="radio" name="tag_12" value="18" id=""
+              <?php if($_SESSION['tags'][18] === 1) echo 'checked disabled';?>
+              <?php if($_SESSION['tags'][17] === 1) echo 'disabled';?>></td>
           </tr>
           <tr>
           </tr>
@@ -276,95 +285,6 @@
 
         </form>
         <?php endif;   ?>
-
-    <!--  <?php //if(isset($_POST['nov27'])):   ?>
-
-        <form action="<?php  // echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST"  class="bg-light p-5 contact-form">
-          <h1> 27 de Noviembre de 2019</h1>
-        <table  class="table table-bordered table-responsive table-hover">
-          <thead class = "thead-dark">
-            <tr style="text-align: center">
-              <th> Horario </th>
-              <th> Tipo de Actividad</th>
-              <th> Actividad </th>
-              <th> Expositor </th>
-              <th> Asistiré </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr >
-              <th>09:00-11:00 </th>
-              <td>Conferencia Magistral</td>
-              <td>El desafío de la excelencia en la cadena de suministro</td>
-              <td>Frank Nalepa</td>
-              <td><input type="checkbox" name="tag_8" id="" value="10"
-                <?php //if($_SESSION['tags'][10] === 1) echo 'checked disabled';?>></td>
-            </tr>
-            <tr>
-               <th rowspan="2">11:00-12:30</th>
-               <td rowspan="2">Panel
-               <br><br><br>Conferencia</td>
-               <td rowspan="2">Jóvenes emprendedores en la proveeduria automotriz de autopartes
-               <br><br>Importancia del factor humano  en  el sector automotriz</td>
-               <td rowspan="2">Ing. Abraham Eduardo Pinedo Martínez
-               <br><br>Ma. de Lourdes Quijas Jiménez</td>
-               <td rowspan="2"><input type="radio" name="tag_9" value="11" id=""
-                 <?php //if($_SESSION['tags'][11] === 1) echo 'checked disabled';?>
-                 <?php //if($_SESSION['tags'][12] === 1) echo 'disabled';?>>
-                 <br><br><br><input type="radio" name="tag_9" value="12" id=""
-                 <?php//if($_SESSION['tags'][12] === 1) echo 'checked disabled';?>
-                 <?php //if($_SESSION['tags'][11] === 1) echo 'disabled';?>></td>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-              <th rowspan="2">12:45-14:30</th>
-              <td rowspan="2">Conferencia
-              <br><br>Conferencia</td>
-              <td rowspan="2">Desarrollo de la PYMES para la proveeduria automotriz
-              <br><br>Innovacion y creatividad</td>
-              <td rowspan="2">Ing. Armando Gómez de la Torre
-              <br><br>MDA. Juan Camilo Mesa Jaramillo</td>
-              <td rowspan="2"><input type="radio" name="tag_10" value="13" id=""
-                <?php //if($_SESSION['tags'][13] === 1) echo 'checked disabled';?>
-                <?php //if($_SESSION['tags'][14] === 1) echo 'disabled';?>>
-              <br><br><input type="radio" name="tag_10" value="14" id=""
-              <?php //if($_SESSION['tags'][14] === 1) echo 'checked disabled';?>
-              <?php //if($_SESSION['tags'][13] === 1) echo 'disabled';?>></td>
-            </tr>
-            <tr>
-            </tr>
-            <tr>
-              <th>16:00-19:00</th>
-              <td>Concurso</td>
-              <td>Moldelado en Solid Works. Final (debe inscribirse en el día 26)</td>
-              <td></td>
-              <td><input <input type="checkbox" name="tag_11" value="15" id="" value="" disabled
-                <?php //if($_SESSION['tags'][15] === 1) echo 'checked';?></td>
-            </tr>
-            <tr>
-                <th rowspan="2">16:00-18:30</th>
-                <td rowspan="2">Taller
-                <br><br>Conferencia</td>
-                <td rowspan="2">Logística
-                <br><br>Es tiempo de crear</td>
-                <td rowspan="2">Álvaro Dávila
-                <br><br>Ing. Cuitláhuac Pérez Cerros</td>
-                <td rowspan="2"><input type="radio" name="tag_12" value="16" id=""
-                  <?php //if($_SESSION['tags'][16] === 1) echo 'checked disabled';?>
-                  <?php //if($_SESSION['tags'][17] === 1) echo 'disabled';?>>
-                <br><br><br><input type="radio" name="tag_12" value="17" id=""
-                <?php //if($_SESSION['tags'][17] === 1) echo 'checked disabled';?>
-                <?php //if($_SESSION['tags'][16] === 1) echo 'disabled';?>></td>
-            </tr>
-            <tr>
-            </tr>
-          <tbody>
-        </table>
-        <input type="submit"  name="guardar" value="Guardar" class="btn btn-primary">
-        <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
-        </form>
-        <?php //endif;   ?>-->
     </div>
     <br>
 

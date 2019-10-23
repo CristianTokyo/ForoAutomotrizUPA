@@ -13,7 +13,7 @@ if ($_SESSION['participante'])
   $correo = $_SESSION['participante'];
   $nip = $_SESSION['clave'];
   $participante = $_SESSION['nombre'];
-  $sql = "select idusr from users where email = '$correo'"; //falta un and al password
+  $sql = "select idusr from users where email = '$correo' and pass = '$nip'"; //falta un and al password
   if ($result = mysqli_query($conexion, $sql))
     $row   = mysqli_fetch_row($result);
 
@@ -38,7 +38,7 @@ if ($_SESSION['participante'])
 
   //Lista de eventos en session
   $_SESSION['tags'] = array(1=>0,2=>0, 3=>0, 4=>0,5=>0,6=>0,7=>0,8=>0,9=>0,10=>0,11=>0,12=>0,
-                              13=>0, 14=>0,15=>0,16=>0,17=>0);
+                              13=>0, 14=>0,15=>0,16=>0,17=>0,18=>0);
   //Omitir los llenos
   foreach ($listaLlenos as $key => $value)
     $_SESSION['tags'][$listaLlenos[$key]] = 1;
