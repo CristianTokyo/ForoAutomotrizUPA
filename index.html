@@ -77,16 +77,26 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="videoplay" tabindex="-1" role="dialog" aria-labelledby="Bienvenido" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-body">
-          <video width="100%">
-              <source src ="vids/cortinilla.mp4" type="video/mp4">
-          </video>
+    <!--Video de introduccion-->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class"modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="embed-responsive embed-responsive-16by9">
+            <video class="embed-responsive-item" id="videoCortinilla" width="200%" controls="controls"
+            poster="images/portada_foro.jpg" autoplay>
+                <source src ="vids/cortinilla.mp4" type="video/mp4">
+                  No lo aguanta
+            </video>
         </div>
       </div>
+      </div>
     </div>
+
 
     <!-- body principal -->
     <div class="hero-wrap" style="background-image: url('images/portada_foro.jpg');" data-stellar-background-ratio="0.5">
@@ -867,6 +877,16 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function(){
+          $('#videoModal').modal({
+              show: true
+          }).on('hidden.bs.modal', function(){
+              $(this).find('video')[0].pause();
+          });
+        });
+    </script>
+
 
   </body>
 </html>
