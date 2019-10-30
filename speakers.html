@@ -255,10 +255,12 @@
   <script src="js/main.js"></script>
 
 
+
   <script type="text/javascript">
         $(document).ready(function(){
           $('#videoModal').modal({
               show: true
+
           }).on('hidden.bs.modal', function(){
               $(this).find('video')[0].pause();
           });
