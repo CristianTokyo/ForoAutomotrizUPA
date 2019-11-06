@@ -85,6 +85,9 @@ INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finis
 INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 6,"Inventarios estratégicos en la industria automotriz","Álvaro Salinas Figueroa","-","12:45","14:00",27,1000);
 INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 5,"Es Tiempo de Crear","Ing. Cuitláhuac Pérez Cerros","Director de Maindsteel y Presidente de Grupo MAEN","12:45","14:00",27,1000);
 
+INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 5,"Visita Industrial","Cooper Standard","","09:00","13:00",27,28);
+INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 5,"Visita Industrial","NISSAN A1","","07:30","13:00",26,34);
+INSERT INTO `events` (`idtype`, `ename`, `manager`, `mcharge`, `beginhr`, `finishhr`, `day`, `size`) VALUES ( 5,"Visita Industrial","Gestamp","","08:30","13:00",26,30);
 
 
 -- select * from users_events inner join users using(idusr) inner join events using(idevent) inner join types using(idtype); 

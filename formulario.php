@@ -8,7 +8,7 @@ session_start(); //Obtiene los resultados de la sesión
 if ($_SESSION['participante'])
 {   //asegurar que esta logeado
 
-  $postArreglo = array('tag_1','tag_2','tag_3','tag_4','tag_5','tag_6','tag_7','tag_8','tag_9','tag_10','tag_11','tag_12');
+  $postArreglo = array('tag_1','tag_2','tag_3','tag_4','tag_5','tag_6','tag_7','tag_8','tag_9','tag_10','tag_11','tag_12','tag_13');
   //Obtiene el idusr de la base de datos de la persona logeada
   $correo = $_SESSION['participante'];
   $nip = $_SESSION['clave'];
@@ -98,8 +98,6 @@ if ($_SESSION['participante'])
 
       if ($horario != NULL && $eventos != NULL) //Si el usuario no está inscrito a nada no manda correo ni adjunta a la db
       {
-
-
         $cuerpo = '<h2>'.$participante.'</h2>';
 
         $cuerpo .= '<h2>Bienvenido al Foro Internacional de la Industria Automotriz Ags-UPA</h2>
@@ -124,6 +122,7 @@ if ($_SESSION['participante'])
         }
 
         $cuerpo .= '</tbody></table>';
+        $cuerpo .= 'Si seleccionaste una visita industrial, recuerda revisar los lineamientos de vestimenta para cada empresa.';
         $cuerpo .= '<p>Te esperamos.</p>';
         $cuerpo .= '<img src = "cid:logo">';
 
@@ -139,7 +138,99 @@ if ($_SESSION['participante'])
         $mail->IsHTML(true);
         $mail->Subject = $asunto;
         $mail->Body = $cuerpo;
-        $mail->AddEmbeddedImage('images/LogoForo.png', 'logo');
+        $mail->AddEmbeddedImage('images/LOGO_FORO_email.png', 'logo');
+        $mail->CharSet = 'UTF-8';
+
+        //SMT Server
+        $mail->IsSMTP();
+        $mail->Host = 'mail.foroautomotrizags-upa.com';
+        $mail->Port = 2525;
+        $mail->SMTPAuth = true;
+        $mail->Username = 'registro@foroautomotrizags-upa.com';
+        $mail->Password = 'registro_upa';
+
+
+        if($mail->Send()){
+          echo "<script>";
+          echo "alert('Datos guardados, revise su correo');";
+          echo "window.location = 'index.html';";
+          echo "</script>";}
+        else
+          echo 'Mailer Error: '.$mail->ErrorInfo;
+        }
+    }
+    if(isset($_POST['guardarVisita'])) //Viene del formulario
+    {
+      $eventos  =  array();
+      //Obtiene los eventos seleccionados
+      foreach ($postArreglo as $postNombre) {
+        if (array_key_exists($postNombre, $_POST))
+          $eventos[] = $_POST[$postNombre];}
+
+        //Inscribe al participante en las actividades seleccionadas
+        //Revisar que el usuario no este incrito en ese evento y lo inscribe
+      foreach ($eventos as $key => $value) {
+        $sql ="select idusr FROM users_events where idusr = '$numUsuario' and idevent = '$value'";
+        $result = mysqli_query($conexion, $sql);
+        if (!mysqli_num_rows($result)){
+          $sql = "insert into `foroaut1_events`.`users_events` (`idusrevent`,`idusr`,`idevent`) values (null, '$numUsuario','$value')";
+          $result = mysqli_query($conexion, $sql);}
+      }
+
+      //Obtiene el horario completo del usuario
+      $sql = "SELECT ename, manager, day, beginhr, finishhr from users_events, events
+              WHERE users_events.idevent = events.idevent and users_events.idusr = '$numUsuario' order by events.idevent";
+      if($resultado = mysqli_query($conexion, $sql))
+        if (!mysqli_num_rows($resultado))
+          $horario = array();
+        else
+          while ($rows   = $resultado->fetch_assoc())
+            $horario[] = $rows;
+
+
+      if ($horario != NULL && $eventos != NULL) //Si el usuario no está inscrito a nada no manda correo ni adjunta a la db
+      {
+        $cuerpo = '<h2>'.$participante.'</h2>';
+
+        $cuerpo .= '<h2>Bienvenido al Foro Internacional de la Industria Automotriz Ags-UPA</h2>
+                  <p>Estos son las visitas industriales a las que estás inscrito:<br></p>';
+        $cuerpo .= '<table border = "1">
+            <thead>
+              <tr style="text-align: center">
+                <th>Actividad</th>
+                <th>Expositor</th>
+                <th>Día</th>
+                <th>Hora Inicio</th>
+                <th>Hora Fin</th>
+              </tr>
+          </thead><tbody>';
+
+        foreach ($horario as $key => $value) {
+            $cuerpo .= '<tr style="text-align: center"><td>'.$horario[$key]['ename']."</td>";
+            $cuerpo .= "<td>".$horario[$key]['manager']."</td>";
+            $cuerpo .= "<td>".$horario[$key]['day']." Nov </td>";
+            $cuerpo .= "<td>".$horario[$key]['beginhr']."</td>";
+            $cuerpo .= "<td>".$horario[$key]['finishhr']."</td></tr>";
+        }
+
+        $cuerpo .= '</tbody></table>';
+        $cuerpo .= 'Si seleccionaste una visita industrial, recuerda revisar los lineamientos de vestimenta para cada empresa.';
+        $cuerpo .= '<p>Te esperamos.</p>';
+        $cuerpo .= '<img src = "cid:logo">';
+
+        $asunto  = "Eventos del Foro Automotriz";
+
+        require("includes/class.phpmailer.php");
+        $mail = new PHPMailer();
+        $mail->From = "registro@foroautomotrizags-upa.com"; //Revisar direccion
+        $mail->FromName = "Registro Foro Automotriz AGS-UPA";
+        $mail->AddAddress($correo);
+        $mail->AddBCC("registro@foroautomotrizags-upa.com");
+        $mail->WordWrap = 50;
+        $mail->IsHTML(true);
+        $mail->Subject = $asunto;
+        $mail->Body = $cuerpo;
+        $mail->AddEmbeddedImage('images/LOGO_FORO_email.png', 'logo');
         $mail->CharSet = 'UTF-8';
 
         //SMT Server
