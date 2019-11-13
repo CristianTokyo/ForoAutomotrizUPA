@@ -92,22 +92,37 @@
                 <?php endif;   ?>
               </div>
                <input class="btn btn-primary" type="submit"   name="listas"    value="Crear listados">
+                <input class="btn btn-primary" type="submit"   name="listaTotal"    value="Crear Totales">
             </form>
       </div>
     </div>
   </div>
-    <?php if(isset($_POST['listas'])):   ?>
+
+  <?php if(isset($_POST['listas'])):   ?>
   <div class = "container">
       <form method="POST"  class="bg-light p-5 contact-form">
-            <?php listadoParticipantes($participantes, $eventoSeleccionado);
-            ?>
+            <?php listadoParticipantes($participantes, $eventoSeleccionado);?>
           </tbody>
       </table>
       <input type="submit"  name="listado" value="Guardar"class="btn btn-primary">
       <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
       </form>
   </div>
-        <?php endif;   ?>
+  <?php endif;?>
+
+
+  <?php if(isset($_POST['listaTotal'])):   ?>
+  <div class = "container">
+      <form method="POST"  class="bg-light p-5 contact-form">
+            <?php listadoTotales($listasTotales);?>
+          </tbody>
+      </table>
+      <input type="submit"  name="Noguardar" value="Cerrar" class="btn btn-primary">
+      </form>
+  </div>
+  <?php endif;?>
+
+
   </section>
     <br>
 

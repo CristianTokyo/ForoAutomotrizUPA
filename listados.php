@@ -9,7 +9,7 @@ if ($_SESSION['nombre'] == 'administrador') {   //asegurar que esta logeado el a
   $correo = $_SESSION['participante'];
   $nip = $_SESSION['clave'];
   $participante = $_SESSION['nombre'];
-  $sql = "select idusr from users where email = '$correo'"; //falta un and al password
+  $sql = "select idusr from users where email = '$correo' and pass = '$nip'";
   if ($result = mysqli_query($conexion, $sql))
     $row   = mysqli_fetch_row($result);
 
@@ -57,10 +57,7 @@ if ($_SESSION['nombre'] == 'administrador') {   //asegurar que esta logeado el a
           $this->Cell(0,10,'Pag. '.$this->PageNo(),0,0,'R');
         }
       }
-
-
       $pdf = new PDF();
-
       $pdf->AddPage();
       $pdf->SetFont('Arial', '', 14);
       $pdf->Cell(10, 10, 'No.', 1, 0, 'C');
@@ -81,6 +78,18 @@ if ($_SESSION['nombre'] == 'administrador') {   //asegurar que esta logeado el a
 
       $pdf->Output('D', $ename . '.pdf');
     }
+
+    if (isset($_POST['listaTotal'])){
+      $sql = "select e.ename, e.manager, cuenta from ( select idevent, count(idevent) cuenta from users_events group by idevent having COUNT(idevent)) tmp, events e where e.idevent = tmp.idevent";
+      if ($result = mysqli_query($conexion, $sql))
+        if (!mysqli_num_rows($result))
+          $listasTotales = array();
+        else
+          while ($rows = $result->fetch_assoc())
+            $listasTotales[] = $rows;
+    }
+
+
   }
 }
 require('listadosP.php');
@@ -113,5 +122,24 @@ function listadoEventos($eventos)
     $idev = $key + 1;
     echo "<option value =" . $idev . ">" . $eventos[$key]['day'] . " Nov -";
     echo $eventos[$key]['ename'] . "</option>";
+  }
+}
+//Genera  el listado de los inscritos totales
+function listadoTotales($listasTotales)
+{
+  echo "<table  class='table table-bordered table-hover' id = 'tablaListas'>";
+  echo "<thead class = 'thead-dark'>";
+  echo "<tr style='text-align: center'>";
+  echo "<th> # </th>";
+  echo "<th> Actividad</th>";
+  echo "<th> Expositor </th>";
+  echo "<th> Inscritos </th></th></thead><body>";
+  foreach ($listasTotales as $key => $value) {
+    $idev = $key + 1;
+    echo "<tr><td>" . $idev . "</td>";
+    echo "<td>" . $listasTotales[$key]['ename'] . "</td>";
+    echo "<td>" . $listasTotales[$key]['manager'] . "</td>";
+    echo "<td>" . $listasTotales[$key]['cuenta'] . "</td></tr>";
+
   }
 }

@@ -21,17 +21,20 @@ if ($_SESSION['participante'])
 
   //si el cupo esta lleno  el evento se omite
   $sql = "select e.idevent from (select idevent, count(idevent) cuenta from users_events group by idevent HAVING count(idevent)>0) tmp, events e WHERE e.idevent = tmp.idevent and tmp.cuenta >= e.size";
-  if ($result = mysqli_query($conexion,$sql)){
-  if (!mysqli_num_rows($result)){
-    $eventosLlenos = array();
-    $listaLlenos = array();}
-  else{
-    while ($rows = $result->fetch_assoc())
-      $eventosLlenos[] = $rows;
+  if ($result = mysqli_query($conexion,$sql))
+  {
+    if (!mysqli_num_rows($result)){
+      $eventosLlenos = array();
+      $listaLlenos = array();}
+    else
+    {
+      while ($rows = $result->fetch_assoc())
+        $eventosLlenos[] = $rows;
 
-    foreach ($eventosLlenos as $key => $value) {
-        $testEvent = $eventosLlenos[$key];
-        $listaLlenos[] = $testEvent['idevent'];
+      foreach ($eventosLlenos as $key => $value)
+      {
+          $testEvent = $eventosLlenos[$key];
+          $listaLlenos[] = $testEvent['idevent'];
       }
     }
   }
